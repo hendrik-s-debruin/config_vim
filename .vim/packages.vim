@@ -112,8 +112,8 @@ packadd vim-trailing-whitespace
 noremap <leader>w :FixWhitespace<Enter>
 
 " better window management
-packadd winresizer
 let g:winresizer_start_key = '<leader>e'
+packadd winresizer
 
 " nice status bar
 let g:airline_powerline_fonts = 1
