@@ -34,6 +34,7 @@ colorscheme gruvbox
 
 " File manager
 packadd nerdtree
+let NERDTreeMinimalUI=1
 noremap <leader>nt :NERDTreeToggle<Enter>
 noremap <leader>ntf :NERDTreeFind<Enter>
 
