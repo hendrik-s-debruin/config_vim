@@ -15,5 +15,3 @@ noremap <leader>hc :nohlsearch<Enter>
 noremap <leader>r :RangerChooser<Enter>
 noremap <leader>i :call IncludeCHeader()<Enter>
 noremap <leader>I :call IncludeCSystemHeader()<Enter>
-
-" Plugins

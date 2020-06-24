@@ -1,8 +1,5 @@
 " This file keeps all custom functions and commands for vim
 
-" Close all other files
-command! Only only tabonly
-
 " Reload configuration
 command! Rebash source ~/.vimrc
 

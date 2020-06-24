@@ -8,3 +8,4 @@ source ~/.vim/behaviour.vim
 source ~/.vim/filetype.vim
 source ~/.vim/functions.vim
 source ~/.vim/bindings.vim
+source ~/.vim/packages.vim
