@@ -86,6 +86,7 @@ packadd vim-gitgutter
 packadd vim-glsl
 
 " automatically generate tag file
+let g:gutentags_ctags_tagfile=".tags"
 packadd vim-gutentags
 
 " highlight usages of the word under the cursor
