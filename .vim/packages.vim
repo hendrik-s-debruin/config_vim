@@ -55,7 +55,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-packadd syntastic
+" packadd syntastic
 
 " Visualising the undo history
 packadd undotree
@@ -120,3 +120,7 @@ let g:airline_powerline_fonts = 1
 " do not show the mode, as this is shown already inside of the powerline
 set noshowmode
 packadd vim-airline
+
+" Code completion
+source ~/.vim/pack/plugins/coc_bindings.vim
+packadd coc.nvim

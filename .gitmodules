@@ -85,3 +85,6 @@
 [submodule ".vim/pack/plugins/opt/vim-airline"]
 	path = .vim/pack/plugins/opt/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/plugins/opt/coc.nvim"]
+	path = .vim/pack/plugins/opt/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
