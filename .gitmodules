@@ -13,9 +13,6 @@
 [submodule ".vim/pack/plugins/opt/fcitx.vim"]
 	path = .vim/pack/plugins/opt/fcitx.vim
 	url = https://github.com/vim-scripts/fcitx.vim.git
-[submodule ".vim/pack/plugins/opt/fzf.vim"]
-	path = .vim/pack/plugins/opt/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule ".vim/pack/plugins/opt/gruvbox"]
 	path = .vim/pack/plugins/opt/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
@@ -88,3 +85,6 @@
 [submodule ".vim/pack/plugins/opt/coc.nvim"]
 	path = .vim/pack/plugins/opt/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule ".vim/pack/plugins/opt/fzf"]
+	path = .vim/pack/plugins/opt/fzf
+	url = https://github.com/junegunn/fzf.git

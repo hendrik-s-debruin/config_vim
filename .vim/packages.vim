@@ -24,7 +24,7 @@ packadd emmet-vim
 packadd fcitx.vim
 
 " fuzzy file finder
-packadd fzf.vim
+packadd fzf
 nnoremap <leader>b :FZF<Enter>
 
 " theme
