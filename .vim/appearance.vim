@@ -10,9 +10,16 @@ set display=lastline
 set colorcolumn=+1
 set list lcs=tab:│\ 
 highlight SpellBad ctermbg=001 ctermfg=007
+
 set number relativenumber
 augroup numbertoggle
 	autocmd!
 	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
+
+augroup highlightcursorline
+	autocmd!
+	autocmd BufEnter * set cursorline
+	autocmd BufLeave * set nocursorline
 augroup END
