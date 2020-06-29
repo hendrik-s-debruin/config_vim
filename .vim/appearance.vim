@@ -20,6 +20,6 @@ augroup END
 
 augroup highlightcursorline
 	autocmd!
-	autocmd BufEnter * set cursorline
-	autocmd BufLeave * set nocursorline
+	autocmd WinEnter * set cursorline
+	autocmd WinLeave * set nocursorline
 augroup END
