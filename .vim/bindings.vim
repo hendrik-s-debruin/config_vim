@@ -15,3 +15,7 @@ noremap <leader>hc :nohlsearch<Enter>
 noremap <leader>r :RangerChooser<Enter>
 noremap <leader>i :call IncludeCHeader()<Enter>
 noremap <leader>I :call IncludeCSystemHeader()<Enter>
+noremap <leader>s1 :call SecMajor("=")<Enter>
+noremap <leader>s2 :call SecMajor("-")<Enter>
+noremap <leader>s3 :call SecMinor("=")<Enter>
+noremap <leader>s4 :call SecMinor("-")<Enter>
