@@ -1,9 +1,13 @@
 " This file keeps all custom functions and commands for vim
 
+" ==============================================================================
 " Reload configuration
+" ==============================================================================
 command! Rebash source ~/.vimrc
 
+" ==============================================================================
 " RangerChooser
+" ==============================================================================
 function! RangeChooser()
     let temp = tempname()
     " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
@@ -35,25 +39,9 @@ function! RangeChooser()
 endfunction
 command! -bar RangerChooser call RangeChooser()
 
-" C headers
-function! IncludeCHeader()
-	let l:line = getline('.')
-	let l:output = '#include "' . l:line . '"'
-	let l:failed = append(line('.'), l:output)
-
-	" Remove the old line
-	execute ':normal! dd'
-endfunction
-
-function! IncludeCSystemHeader()
-	let l:line = getline('.')
-	let l:output = '#include <' . l:line . '>'
-	let l:failed = append(line('.'), l:output)
-
-	" Remove the old line
-	execute ':normal! dd'
-endfunction
-
+" ==============================================================================
+" Sectioning
+" ==============================================================================
 function! SecMajor(border_char)
 	let l:line = substitute(getline('.'), "^[ 	]*", "", "")
 	let l:max_cols = &textwidth
