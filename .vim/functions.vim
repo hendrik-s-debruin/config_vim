@@ -77,14 +77,19 @@ function! SecMajor(border_char)
 		let l:output_line = " " . l:line
 	endif
 
+	" For filetypes such as LaTeX, the comment sequence may contain a '%'
+	" symbol. The following lines escape that symbol
+	let l:comment_template = substitute(&commentstring, "%s", "COMMENT_TEMPLATE", "")
+	let l:comment_template = substitute(l:comment_template, "%", "%%", "")
+	let l:comment_template = substitute(l:comment_template, "COMMENT_TEMPLATE", "%s", "")
 
-	let l:output = printf(&commentstring, l:border)
+	let l:output = printf(l:comment_template, l:border)
 	let l:failed = append(line('.'), l:tab_chars . l:output)
 
-	let l:output = printf(&commentstring, l:output_line)
+	let l:output = printf(l:comment_template, l:output_line)
 	let l:failed = append(line('.'), l:tab_chars . l:output)
 
-	let l:output = printf(&commentstring, l:border)
+	let l:output = printf(l:comment_template, l:border)
 	let l:failed = append(line('.'), l:tab_chars . l:output)
 
 	execute ':normal! dd'
@@ -138,7 +143,13 @@ function! SecMinor(border_char)
 		let l:output_line = " " . repeat(a:border_char, l:border_flank_left) . " " . l:line . " " . repeat(a:border_char, l:border_flank_right)
 	endif
 
-	let l:output = l:tab_chars . printf(&commentstring, l:output_line)
+	" For filetypes such as LaTeX, the comment sequence may contain a '%'
+	" symbol. The following lines escape that symbol
+	let l:comment_template = substitute(&commentstring, "%s", "COMMENT_TEMPLATE", "")
+	let l:comment_template = substitute(l:comment_template, "%", "%%", "")
+	let l:comment_template = substitute(l:comment_template, "COMMENT_TEMPLATE", "%s", "")
+
+	let l:output = l:tab_chars . printf(l:comment_template, l:output_line)
 	let l:failed = append(line('.'), l:output)
 
 	execute ':normal! dd'
