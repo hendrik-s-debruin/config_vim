@@ -12,3 +12,6 @@ autocmd BufRead,BufNewFile *.tese set filetype=glsl
 autocmd BufRead,BufNewFile *.geom set filetype=glsl
 autocmd BufRead,BufNewFile *.frag set filetype=glsl
 autocmd BufRead,BufNewFile *.comp set filetype=glsl
+
+" ROS launch files
+autocmd BufRead,BufNewFile *.launch set filetype=xml
