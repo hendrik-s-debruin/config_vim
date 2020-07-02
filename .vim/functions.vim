@@ -6,6 +6,17 @@
 command! Rebash source ~/.vimrc
 
 " ==============================================================================
+" Conceal Level
+" ==============================================================================
+function! ToggleConcealLevel()
+	if &conceallevel == 0
+		setlocal conceallevel=2
+	else
+		setlocal conceallevel=0
+	endif
+endfunction
+
+" ==============================================================================
 " RangerChooser
 " ==============================================================================
 function! RangeChooser()

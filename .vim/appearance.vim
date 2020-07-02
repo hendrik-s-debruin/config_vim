@@ -8,6 +8,7 @@ set breakindent
 set linebreak
 set display=lastline
 set colorcolumn=+1
+set conceallevel=2
 set list lcs=tab:│\ 
 highlight SpellBad ctermbg=001 ctermfg=007
 
