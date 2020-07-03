@@ -165,3 +165,11 @@ function! SecMinor(border_char)
 
 	execute ':normal! dd'
 endfunction
+
+" ==============================================================================
+" Write to a file that requires root permissions
+" ==============================================================================
+function! Sudow()
+	:w !sudo tee % > /dev/null
+endfunction
+command! Sudow call Sudow()
