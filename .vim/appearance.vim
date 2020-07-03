@@ -11,9 +11,6 @@ set colorcolumn=+1
 set conceallevel=2
 set list lcs=tab:│\ 
 
-" 232: grey3 #080808, 202: OrangeRed1 #ff5f00
-highlight SpellBad ctermbg=232 ctermfg=202
-
 set number relativenumber
 augroup numbertoggle
 	autocmd!
