@@ -42,6 +42,8 @@ nnoremap <leader>b :FZF<Enter>
 " ==============================================================================
 " theme
 " ==============================================================================
+let g:gruvbox_guisp_fallback = "bg"
+let g:gruvbox_italic = '1'
 packadd gruvbox
 colorscheme industry
 colorscheme gruvbox
