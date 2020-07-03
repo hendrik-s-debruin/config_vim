@@ -5,7 +5,6 @@ set autoindent
 set nowrap
 set mouse=a
 set incsearch
-set spell
 set spelllang=en_gb
 set textwidth=80
 

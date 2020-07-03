@@ -4,7 +4,10 @@
 " Do not use the default comment of /* <comment> */
 set commentstring=//%s
 
+" Continue doxygen comments
 set comments^=:///
+
+set spell
 
 " ==============================================================================
 " Functions
