@@ -88,3 +88,6 @@
 [submodule ".vim/pack/plugins/opt/fzf"]
 	path = .vim/pack/plugins/opt/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/pack/plugins/opt/CamelCaseMotion"]
+	path = .vim/pack/plugins/opt/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion.git
