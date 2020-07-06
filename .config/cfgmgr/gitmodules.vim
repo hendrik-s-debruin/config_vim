@@ -91,3 +91,6 @@
 [submodule ".vim/pack/plugins/opt/CamelCaseMotion"]
 	path = .vim/pack/plugins/opt/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
+[submodule ".vim/pack/plugins/opt/vim-toml"]
+	path = .vim/pack/plugins/opt/vim-toml
+	url = https://github.com/cespare/vim-toml.git
