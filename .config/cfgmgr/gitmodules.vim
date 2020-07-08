@@ -94,3 +94,6 @@
 [submodule ".vim/pack/plugins/opt/vim-toml"]
 	path = .vim/pack/plugins/opt/vim-toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule ".vim/pack/plugins/opt/vim-fugitive"]
+	path = .vim/pack/plugins/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
