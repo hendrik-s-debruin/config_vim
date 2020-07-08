@@ -97,3 +97,9 @@
 [submodule ".vim/pack/plugins/opt/vim-fugitive"]
 	path = .vim/pack/plugins/opt/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/plugins/opt/ultisnips"]
+	path = .vim/pack/plugins/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/pack/plugins/opt/supertab"]
+	path = .vim/pack/plugins/opt/supertab
+	url = https://github.com/ervandew/supertab.git
