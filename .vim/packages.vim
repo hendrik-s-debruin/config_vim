@@ -8,6 +8,7 @@
 " Preconfigured Completions
 " ==============================================================================
 packadd supertab " required to play nicely with coc
+let g:UltiSnipsEditSplit="vertical"
 packadd ultisnips
 
 " ==============================================================================

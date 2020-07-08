@@ -1,0 +1,22 @@
+snippet once "Insert header guards" b
+#ifndef ${1:`!p import uuid
+if not snip.c:
+	hexval = str(uuid.uuid4())
+	file_id = fn.upper() + "_" + hexval.lower()
+	file_id = file_id.replace(".", "_").replace("-", "_")
+	snip.rv = file_id`}
+#define $1
+
+${0:${VISUAL}}
+
+#endif // $1
+endsnippet
+
+snippet main "main function"
+int main(int argc, char **argv)
+{
+	${0:${VISUAL}}
+
+	return EXIT_SUCCESS;
+}
+endsnippet
