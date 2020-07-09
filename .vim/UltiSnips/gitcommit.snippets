@@ -1,0 +1,33 @@
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+endglobal
+
+global !p
+def completeCommitType(t):
+	opts = [
+		"fix",
+		 "feat",
+		 "build",
+		 "chore",
+		 "cli",
+		 "docs",
+		 "style",
+		 "refactor",
+		 "perf",
+		 "test"
+	]
+	return complete(t, opts)
+endglobal
+
+snippet msg "Conventional commit message" b
+$1`!p snip.rv = completeCommitType(t[1])`(${2:SCOPE})${3:!}: ${4:DESCRIPTION}
+
+${5:BODY}
+
+${3/!/BREAKING CHANGE: /}${6:FOOTER}
+endsnippet
