@@ -7,3 +7,32 @@ endsnippet
 snippet cerr "print to stderr"
 std::cerr << "${1:text}" << std::endl;
 endsnippet
+
+snippet namespace "create a namespace" b
+namespace ${1:name}
+{
+	${0:${VISUAL}}
+} // end namespace $1
+endsnippet
+
+snippet class "create a class" b
+class ${1:ClassName}
+{
+public:
+	$1();
+	~$1();
+
+private:
+};
+endsnippet
+
+snippet try "create a try-catch block" b
+try
+{
+	${1:${VISUAL}}
+}
+catch (${2:const std::exception &e})
+{
+	$0
+}
+endsnippet
