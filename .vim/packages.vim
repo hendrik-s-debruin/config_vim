@@ -9,6 +9,9 @@
 " ==============================================================================
 packadd supertab " required to play nicely with coc
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 packadd ultisnips
 
 " ==============================================================================
