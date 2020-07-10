@@ -103,3 +103,6 @@
 [submodule ".vim/pack/plugins/opt/supertab"]
 	path = .vim/pack/plugins/opt/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/pack/plugins/opt/i3-vim-syntax"]
+	path = .vim/pack/plugins/opt/i3-vim-syntax
+	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
