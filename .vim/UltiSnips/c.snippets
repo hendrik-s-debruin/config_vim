@@ -22,3 +22,64 @@ int main(int argc, char **argv)
 	return EXIT_SUCCESS;
 }
 endsnippet
+
+snippet if "if block" b
+if (${1:CONDITION})
+{
+	${2:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet elif "else if block" b
+else if (${1:CONDITION})
+{
+	${2:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet else "else block" b
+else
+{
+	${1:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet switch "switch block" b
+switch (${1:EXPRESSION})
+{
+	case ${2:EXPRESSION}:
+		${3:${VISUAL}}
+		break;
+
+	default:
+		${4:break;}
+}
+$0
+endsnippet
+
+snippet while "while block" b
+while(${1:CONDITION})
+{
+	${2:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet dowhile "do-while block" b
+do
+{
+	${1:${VISUAL}}
+}while(${2:CONDITION});
+$0
+endsnippet
+
+snippet for "for block" b
+for(${1:size_t i = 0}; ${2: i !=} ${3:END}; ++i)
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet

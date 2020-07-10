@@ -1,11 +1,11 @@
 extends c
 
-snippet cout "print to stdout"
-std::cout << "${1:text}" << std::endl;
+snippet cout "print to stdout" b
+std::cout << ${1:PRINTOUT} << std::endl;
 endsnippet
 
-snippet cerr "print to stderr"
-std::cerr << "${1:text}" << std::endl;
+snippet cerr "print to stderr" b
+std::cerr << ${1:PRINTOUT} << std::endl;
 endsnippet
 
 snippet namespace "create a namespace" b
@@ -33,6 +33,15 @@ try
 }
 catch (${2:const std::exception &e})
 {
-	$0
+	${3:ERROR HANDLING}
 }
+$0
+endsnippet
+
+snippet fore "for each block" b
+for(const auto &${1:el} : ${2:CONTAINER})
+{
+	${3:${VISUAL}}
+}
+$0
 endsnippet
