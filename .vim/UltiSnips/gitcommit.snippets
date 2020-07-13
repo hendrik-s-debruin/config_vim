@@ -25,10 +25,10 @@ def completeCommitType(t):
 endglobal
 
 snippet msg "Conventional commit message" b
-$1`!p snip.rv = completeCommitType(t[1])``!p if len(t[2]) != 0:
+$1`!p snip.rv = completeCommitType(t[1])``!p if len(t[5]) != 0:
 	snip.rv = "("
 else:
-	snip.rv = ""`${5:SCOPE}`!p if len(t[2]) != 0:
+	snip.rv = ""`${5:SCOPE}`!p if len(t[5]) != 0:
 	snip.rv = ")"
 else:
 	snip.rv = ""`${6:!}: ${2:DESCRIPTION}`!p

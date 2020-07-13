@@ -215,6 +215,10 @@ packadd vim-airline
 " ==============================================================================
 source ~/.vim/pack/plugins/coc_bindings.vim
 packadd coc.nvim
+augroup CocDisableForCertainFiletypes
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave COMMIT_EDITMSG CocDisable
+augroup END
 
 " ==============================================================================
 " Git Integration
