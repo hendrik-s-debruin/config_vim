@@ -32,13 +32,18 @@ else:
 	snip.rv = ")"
 else:
 	snip.rv = ""`${6:!}: ${2:DESCRIPTION}`!p
-if len(t[5]) != 0 or len(t[6]) != 0:
+if len(t[3]) != 0 or len(t[4]) != 0:
 	snip.rv="..."
 else:
-	snip.rv = ""`
-
-${3:BODY}
-
-${6/!/BREAKING CHANGE: /}${4:FOOTER}
+	snip.rv = ""``!p if len(t[3]) != 0:
+	snip.rv = "\n\n"
+else:
+	snip.rv = ""`${3:BODY}`!p if len(t[4]) != 0:
+	snip.rv = "\n\n"
+else:
+	snip.rv = ""``!p if t[6] == "!" and len(t[4]) != 0:
+	snip.rv = "BREAKING CHANGE: "
+else:
+	snip.rv = ""`${4:FOOTER}
 
 endsnippet
