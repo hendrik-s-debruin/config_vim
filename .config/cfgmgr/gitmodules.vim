@@ -106,3 +106,6 @@
 [submodule ".vim/pack/plugins/opt/i3-vim-syntax"]
 	path = .vim/pack/plugins/opt/i3-vim-syntax
 	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
+[submodule ".vim/pack/plugins/opt/vim-hardtime"]
+	path = .vim/pack/plugins/opt/vim-hardtime
+	url = https://github.com/takac/vim-hardtime.git
