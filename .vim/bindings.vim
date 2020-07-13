@@ -18,3 +18,4 @@ noremap  <leader>s2  :call SecMajor("-")<Enter>
 noremap  <leader>s3  :call SecMinor("=")<Enter>
 noremap  <leader>s4  :call SecMinor("-")<Enter>
 noremap  <leader>c   :call ToggleConcealLevel()<Enter>
+noremap <leader>ss   :call ToggleSpell()<Enter>

@@ -173,3 +173,14 @@ function! Sudow()
 	:w !sudo tee % > /dev/null
 endfunction
 command! Sudow call Sudow()
+
+" ==============================================================================
+" Toggle Spellcheck
+" ==============================================================================
+function! ToggleSpell()
+	if &spell
+		set nospell
+	else
+		set spell
+	endif
+endfunction
