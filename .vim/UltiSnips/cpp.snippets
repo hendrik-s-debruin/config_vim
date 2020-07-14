@@ -1,5 +1,8 @@
 extends c
 
+# ==============================================================================
+# Printing
+# ==============================================================================
 snippet cout "print to stdout" b
 std::cout << ${1:PRINTOUT} << std::endl;
 endsnippet
@@ -8,6 +11,9 @@ snippet cerr "print to stderr" b
 std::cerr << ${1:PRINTOUT} << std::endl;
 endsnippet
 
+# ==============================================================================
+# Namespaces
+# ==============================================================================
 snippet namespace "create a namespace" b
 namespace ${1:name}
 {
@@ -15,6 +21,9 @@ namespace ${1:name}
 } // end namespace $1
 endsnippet
 
+# ==============================================================================
+# Classes
+# ==============================================================================
 snippet class "create a class" b
 class ${1:ClassName}
 {
@@ -26,6 +35,9 @@ private:
 };
 endsnippet
 
+# ==============================================================================
+# Flow Control
+# ==============================================================================
 snippet try "create a try-catch block" b
 try
 {
