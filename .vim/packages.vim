@@ -91,12 +91,6 @@ noremap <leader>ntf :NERDTreeFind<Enter>
 packadd quick-scope
 
 " ==============================================================================
-" colour level for nested brackets
-" ==============================================================================
-let g:rainbow_active=1
-packadd rainbow
-
-" ==============================================================================
 " syntax checking
 " ==============================================================================
 " recommended settings of syntastic TODO read the docs and see if this can be
@@ -234,3 +228,23 @@ let g:hardtime_ignore_quickfix     = 1
 let g:hardtime_allow_different_key = 1
 " packadd vim-hardtime
 nnoremap <leader>hm :HardTimeToggle<Enter>
+
+" ==============================================================================
+" colour level for nested brackets
+" ==============================================================================
+" rainbow does not play nicely with vim-cmake-syntax
+function! ConditionalStartRainbowPlugin()
+	if &ft == "cmake"
+		:RainbowToggleOff
+	else
+		:RainbowToggleOn
+	endif
+endfunction
+
+augroup EnableRainbowPlugin
+	autocmd!
+	autocmd BufEnter * :call ConditionalStartRainbowPlugin()
+augroup END
+
+let g:rainbow_active = 1
+packadd rainbow
