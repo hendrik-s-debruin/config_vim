@@ -14,6 +14,7 @@ syn keyword Keyword CHECK_THAT
 syn keyword Keyword CHECK_THROWS
 syn keyword Keyword CHECK_THROWS_AS
 syn keyword Keyword CHECK_THROWS_WITH
+syn keyword Keyword SECTION
 syn keyword Keyword DYNAMIC_SECTION
 syn keyword Keyword FAIL
 syn keyword Keyword FAIL_CHECK
