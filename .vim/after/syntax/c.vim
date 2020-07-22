@@ -38,6 +38,7 @@ syn keyword Keyword THEN
 syn keyword Keyword UNSCOPED_INFO
 syn keyword Keyword WARN
 syn keyword Keyword WHEN
+syn keyword Keyword SCENARIO
 
 " ==============================================================================
 " Concealment
