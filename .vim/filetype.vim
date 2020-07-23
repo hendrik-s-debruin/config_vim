@@ -18,3 +18,4 @@ autocmd BufRead,BufNewFile *.launch set filetype=xml
 
 " Clang tools
 autocmd BufRead,BufNewFile .clang-format set filetype=yaml
+autocmd BufRead,BufNewFile .clang-tidy   set filetype=yaml
