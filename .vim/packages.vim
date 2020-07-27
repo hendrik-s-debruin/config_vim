@@ -14,7 +14,7 @@ packadd i3-vim-syntax
 " ==============================================================================
 packadd supertab " required to play nicely with coc
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 packadd ultisnips
