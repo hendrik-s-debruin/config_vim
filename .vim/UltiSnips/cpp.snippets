@@ -15,10 +15,12 @@ endsnippet
 # Namespaces
 # ==============================================================================
 snippet ns "create a namespace" b
+/// \cond doxygen_namespace_$1
 namespace ${1:name}
 {
 	${0:${VISUAL}}
 } // end namespace $1
+/// \endcond
 endsnippet
 
 # ==============================================================================
