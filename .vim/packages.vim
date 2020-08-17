@@ -183,6 +183,7 @@ packadd vim-startify
 " create tables in ascii
 " ==============================================================================
 packadd vim-table-mode
+nnoremap <leader>tr :TableModeRealign<Enter>
 
 " ==============================================================================
 " highlight and remove trailing whitespace characters
