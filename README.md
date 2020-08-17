@@ -1,1 +1,1 @@
-/home/nidhogg/.config/cfgmgr/README/README.vim.md
+.config/cfgmgr/README/README.vim.md
