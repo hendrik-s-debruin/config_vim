@@ -1,3 +1,9 @@
+snippet sc "Insert Scope" b
+{
+	${0:${VISUAL}}
+}
+endsnippet
+
 snippet once "Insert header guards" b
 #ifndef ${1:`!p if not snip.c:
 	file_id = fn.upper().replace(".", "_")
