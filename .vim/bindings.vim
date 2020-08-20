@@ -10,6 +10,9 @@ noremap  <leader>vs  :vsplit<Enter>
 noremap  <leader>s   :split<Enter>
 noremap  <leader>t   :tabnew<Enter>
 noremap  <leader>hc  :nohlsearch<Enter>
+noremap  <leader>dgh :diffget LOCAL<Enter>
+noremap  <leader>dgk :diffget BASE<Enter>
+noremap  <leader>dgl :diffget REMOTE<Enter>
 
 " Locally defined functions
 noremap  <leader>r   :RangerChooser<Enter>
