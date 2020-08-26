@@ -109,3 +109,6 @@
 [submodule ".vim/pack/plugins/opt/vim-hardtime"]
 	path = .vim/pack/plugins/opt/vim-hardtime
 	url = https://github.com/takac/vim-hardtime.git
+[submodule ".vim/pack/plugins/opt/vim-sourcetrail"]
+	path = .vim/pack/plugins/opt/vim-sourcetrail
+	url = https://github.com/CoatiSoftware/vim-sourcetrail.git
