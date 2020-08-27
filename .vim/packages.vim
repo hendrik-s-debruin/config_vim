@@ -267,6 +267,7 @@ function! SourceTrailToggleServer()
 		echo "Enabling Source Trail Server"
 	endif
 endfunction
-nnoremap <leader>aaa :call SourceTrailToggleServer()<Enter>
-nnoremap <leader>aa  :SourcetrailRefresh<CR>
-nnoremap <leader>as  :SourcetrailActivateToken<CR>
+nnoremap <leader>aaa   :call SourceTrailToggleServer()<Enter>
+nnoremap <leader>aa    :SourcetrailRefresh<CR>
+nnoremap <leader>as    :SourcetrailActivateToken<CR>
+nnoremap <C-LeftMouse> :SourcetrailActivateToken<CR>
