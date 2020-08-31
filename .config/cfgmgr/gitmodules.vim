@@ -115,3 +115,6 @@
 [submodule ".vim/pack/plugins/opt/vim-lsp-cxx-highlight"]
 	path = .vim/pack/plugins/opt/vim-lsp-cxx-highlight
 	url = https://github.com/jackguo380/vim-lsp-cxx-highlight.git
+[submodule ".vim/pack/plugins/opt/editorconfig-vim"]
+	path = .vim/pack/plugins/opt/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
