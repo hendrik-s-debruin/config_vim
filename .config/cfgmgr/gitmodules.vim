@@ -112,3 +112,6 @@
 [submodule ".vim/pack/plugins/opt/vim-sourcetrail"]
 	path = .vim/pack/plugins/opt/vim-sourcetrail
 	url = https://github.com/CoatiSoftware/vim-sourcetrail.git
+[submodule ".vim/pack/plugins/opt/vim-lsp-cxx-highlight"]
+	path = .vim/pack/plugins/opt/vim-lsp-cxx-highlight
+	url = https://github.com/jackguo380/vim-lsp-cxx-highlight.git
