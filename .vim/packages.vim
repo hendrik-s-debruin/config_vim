@@ -203,6 +203,7 @@ nnoremap <leader>tr :TableModeRealign<Enter>
 " ==============================================================================
 " highlight and remove trailing whitespace characters
 " ==============================================================================
+let g:extra_whitespace_ignored_filetypes = ['floggraph', 'git']
 packadd vim-trailing-whitespace
 noremap <leader>w :FixWhitespace<Enter>
 
