@@ -118,3 +118,6 @@
 [submodule ".vim/pack/plugins/opt/editorconfig-vim"]
 	path = .vim/pack/plugins/opt/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/pack/plugins/opt/vim-flog"]
+	path = .vim/pack/plugins/opt/vim-flog
+	url = https://github.com/rbong/vim-flog.git
