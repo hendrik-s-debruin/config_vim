@@ -3,6 +3,10 @@
 
 " Plugins are loaded manually. This way, they may be selectively enabled or
 " disabled in future
+" ==============================================================================
+" CMake Cache Highlighting
+" ==============================================================================
+packadd cmakecache-syntax.vim
 
 " ==============================================================================
 " Git Log

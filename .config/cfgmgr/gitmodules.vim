@@ -121,3 +121,6 @@
 [submodule ".vim/pack/plugins/opt/vim-flog"]
 	path = .vim/pack/plugins/opt/vim-flog
 	url = https://github.com/rbong/vim-flog.git
+[submodule ".vim/pack/plugins/opt/cmakecache-syntax.vim"]
+	path = .vim/pack/plugins/opt/cmakecache-syntax.vim
+	url = https://github.com/neui/cmakecache-syntax.vim
