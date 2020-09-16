@@ -124,3 +124,6 @@
 [submodule ".vim/pack/plugins/opt/cmakecache-syntax.vim"]
 	path = .vim/pack/plugins/opt/cmakecache-syntax.vim
 	url = https://github.com/neui/cmakecache-syntax.vim
+[submodule ".vim/pack/plugins/opt/vim-CtrlXA"]
+	path = .vim/pack/plugins/opt/vim-CtrlXA
+	url = https://github.com/Konfekt/vim-CtrlXA.git
