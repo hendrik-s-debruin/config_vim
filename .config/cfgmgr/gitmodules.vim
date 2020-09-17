@@ -127,3 +127,6 @@
 [submodule ".vim/pack/plugins/opt/vim-CtrlXA"]
 	path = .vim/pack/plugins/opt/vim-CtrlXA
 	url = https://github.com/Konfekt/vim-CtrlXA.git
+[submodule ".vim/pack/plugins/opt/vim-log-highlighting"]
+	path = .vim/pack/plugins/opt/vim-log-highlighting
+	url = https://github.com/MTDL9/vim-log-highlighting.git

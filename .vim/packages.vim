@@ -13,6 +13,7 @@ packadd vim-lsp-cxx-highlight
 packadd i3-vim-syntax
 packadd vim-toml
 packadd vim-glsl
+packadd vim-log-highlighting
 
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque
