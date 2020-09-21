@@ -17,10 +17,10 @@ noremap  <leader>cn  :cnext<CR>
 noremap  <leader>cp  :cprev<CR>
 
 " Locally defined functions
-noremap  <leader>r   :RangerChooser<Enter>
-noremap  <leader>s1  :call SecMajor("=")<Enter>
-noremap  <leader>s2  :call SecMajor("-")<Enter>
-noremap  <leader>s3  :call SecMinor("=")<Enter>
-noremap  <leader>s4  :call SecMinor("-")<Enter>
-noremap  <leader>c   :call ToggleConcealLevel()<Enter>
-noremap <leader>ss   :call ToggleSpell()<Enter>
+noremap <leader>r  :RangerChooser<Enter>
+noremap <leader>s1 :call SecMajor("=")<Enter>
+noremap <leader>s2 :call SecMajor("-")<Enter>
+noremap <leader>s3 :call SecMinor("=")<Enter>
+noremap <leader>s4 :call SecMinor("-")<Enter>
+noremap <leader>c  :call ToggleConcealLevel()<Enter>
+noremap <leader>ss :call ToggleSpell()<Enter>

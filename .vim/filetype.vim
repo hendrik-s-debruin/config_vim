@@ -21,4 +21,7 @@ autocmd BufRead,BufNewFile .clang-format set filetype=yaml
 autocmd BufRead,BufNewFile .clang-tidy   set filetype=yaml
 
 " GDB
-autocmd BufREad,BufNewFile *.gdb set filetype=gdb
+autocmd BufRead,BufNewFile *.gdb set filetype=gdb
+
+" Gazebo
+autocmd BufRead,BufNewFile *.world set filetype=xml
