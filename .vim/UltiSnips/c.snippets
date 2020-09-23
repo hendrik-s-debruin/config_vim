@@ -1,9 +1,29 @@
+# ==============================================================================
+# Debug/NDebug
+# ==============================================================================
+snippet debug "if debug compilation" b
+#ifndef NDEBUG
+	${0:${VISUAL}}
+#endif
+endsnippet
+
+snippet ndebug "if not debug compilation" b
+#ifdef NDEBUG
+	${0:${VISUAL}}
+#endif
+endsnippet
+# ==============================================================================
+# Scopes
+# ==============================================================================
 snippet sc "Insert Scope" b
 {
 	${0:${VISUAL}}
 }
 endsnippet
 
+# ==============================================================================
+# Include Guards
+# ==============================================================================
 snippet once "Insert header guards" b
 #ifndef ${1:`!p if not snip.c:
 	file_id = fn.upper().replace(".", "_")
@@ -20,6 +40,9 @@ ${0:${VISUAL}}
 #endif // $1_$2
 endsnippet
 
+# ==============================================================================
+# Main
+# ==============================================================================
 snippet main "main function" b
 int main(int argc, char **argv)
 {
@@ -29,6 +52,10 @@ int main(int argc, char **argv)
 }
 endsnippet
 
+# ==============================================================================
+# Control Blocks
+# ==============================================================================
+# ===================================== if =====================================
 snippet if "if block" b
 if (${1:CONDITION})
 {
@@ -37,6 +64,7 @@ if (${1:CONDITION})
 $0
 endsnippet
 
+# ================================== else if ===================================
 snippet elif "else if block" b
 else if (${1:CONDITION})
 {
@@ -45,6 +73,7 @@ else if (${1:CONDITION})
 $0
 endsnippet
 
+# ==================================== else ====================================
 snippet else "else block" b
 else
 {
@@ -53,6 +82,7 @@ else
 $0
 endsnippet
 
+# =================================== switch ===================================
 snippet switch "switch block" b
 switch (${1:EXPRESSION})
 {
@@ -66,6 +96,7 @@ switch (${1:EXPRESSION})
 $0
 endsnippet
 
+# =================================== while ====================================
 snippet while "while block" b
 while(${1:CONDITION})
 {
@@ -74,6 +105,7 @@ while(${1:CONDITION})
 $0
 endsnippet
 
+# ================================== do-while ==================================
 snippet dowhile "do-while block" b
 do
 {
@@ -82,6 +114,7 @@ do
 $0
 endsnippet
 
+# ==================================== for =====================================
 snippet for "for block" b
 for(${1:size_t i = 0}; ${2: i !=} ${3:END}; ++i)
 {
@@ -90,6 +123,9 @@ for(${1:size_t i = 0}; ${2: i !=} ${3:END}; ++i)
 $0
 endsnippet
 
+# ==============================================================================
+# Critical Sections
+# ==============================================================================
 snippet crit "Document critical sections" b
 // BEGIN critical section
 	${1:${VISUAL}}
