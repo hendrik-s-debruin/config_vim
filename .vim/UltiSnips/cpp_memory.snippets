@@ -1,0 +1,36 @@
+# ==============================================================================
+# Shared
+# ==============================================================================
+snippet shp "std::shared_ptr" b
+std::shared_ptr<${1:TYPE}> ${2:NAME};
+endsnippet
+
+snippet msp "std::make_shared" b
+auto ${1:NAME} = std::make_shared<${2:TYPE}>(${3:ARGS});
+endsnippet
+
+snippet mspp "std::make_shared" b
+std::shared_ptr<${1:BASE_CLASS}> ${2:NAME} = std::make_shared<${3:DERIVED_CLASS}>(${4:ARGS});
+endsnippet
+
+# ==============================================================================
+# Unique
+# ==============================================================================
+snippet uqp "std::unique_ptr" b
+std::unique_ptr<${1:TYPE}> ${2:NAME};
+endsnippet
+
+snippet mup "std::make_unique" b
+auto ${1:NAME} = std::make_unique<${2:TYPE}>(${3:ARGS});
+endsnippet
+
+snippet mupp "std::make_unique" b
+std::unique_ptr<${1:BASE_CLASS}> ${2:NAME} = std::make_unique<${3:DERIVED_CLASS}>(${4:ARGS});
+endsnippet
+
+# ==============================================================================
+# Weak
+# ==============================================================================
+snippet wkp "std::weak_ptr" b
+std::weak_ptr<${1:TYPE}> ${2:NAME};
+endsnippet

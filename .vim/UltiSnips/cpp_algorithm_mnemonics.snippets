@@ -1,0 +1,362 @@
+# Inspired by this repository
+# https://github.com/tommybennett/algorithm-mnemonics
+# ==============================================================================
+# Nonmodifying
+# ==============================================================================
+# ajf adjacent_find
+snippet ajf "std::adjacent_find" b
+if(auto ${1:it} = std::adjacent_find(std::begin(${2:CONTAINER}), std::end($2));
+	$1 != std::end($2)
+)
+{
+	${3:${VISUAL}}
+}
+$0
+endsnippet
+
+# alo all_of
+snippet alo "std::all_of" b
+if(std::all_of(std::begin(${1:CONTAINER}), std::end($1),[](const ${2:TYPE} &a)
+	{
+		return ${3:PREDICATE};
+	}))
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet aloc "std::all_of const" b
+if(std::all_of(std::cbegin(${1:CONTAINER}), std::cend($1),[](const ${2:TYPE} &a)
+	{
+		return ${3:PREDICATE};
+	}))
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+
+# ano any_of
+snippet ano "std::any_of" b
+if(std::any_of(std::begin(${1:CONTAINER}), std::end($1),[](const ${2:TYPE} &a)
+	{
+		return ${3:PREDICATE};
+	}))
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet anoc "std::any_of" b
+if(std::any_of(std::cbegin(${1:CONTAINER}), std::cend($1),[](const ${2:TYPE} &a)
+	{
+		return ${3:PREDICATE};
+	}))
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+
+# cni count_if
+snippet cni "std::count_if" b
+auto ${1:n} = std::count_if(std::cbegin(${2:CONTAINER}), std::cend($2), [](const ${3:TYPE} &a)
+	{
+		return ${4:PREDICATE};
+	});
+$0
+endsnippet
+
+# cnt count
+snippet cnt "std::count" b
+auto ${1:n} = std::count(std::cbegin(${2:CONTAINER}), std::cend($2), ${3:VALUE});
+endsnippet
+
+# eql equal
+snippet eql "std::equal" b
+if(std::equal(std::cbegin(${1:FIRST_CONTAINER}), std::cend($1), std::cbegin(${2:SECOND_CONTAINER})))
+{
+	${3:${VISUAL}}
+}
+$0
+endsnippet
+
+snippet eqlb "bool = std::equal" b
+bool ${1:VALUE} = std::equal(std::cbegin(${2:FIRST_CONTAINER}), std::cend($2), std::cbegin(${3:SECOND_CONTAINER})));
+endsnippet
+
+# ffo find_first_of
+snippet ffo "std::find_first_of" b
+if(auto ${1:it} = std::find_first_of(
+		std::cbegin(${2:SEARCH_CONTAINER}), std::cend($2),
+		std::cbegin(${3:SEQUENCE_CONTAINER}), std::cend($3)
+	);
+	$1 != ${4:std::cend($2)}
+)
+{
+	$5
+}
+$0
+endsnippet
+
+snippet ffp "std::find_first_of with predicate" b
+if(auto ${1:it} = std::find_first_of(
+		std::cbegin(${2:FIRST_CONTAINER}), std::cend($2),
+		std::cbegin(${3:SECOND_CONTAINER}), std::cend($3),
+		[](const ${4:TYPE} &a, const $4 &b)
+		{
+			return ${5:PREDICATE};
+		}
+	);
+	$1 != ${6:std::cend($2)}
+)
+{
+	$7
+}
+$0
+endsnippet
+
+# fin find_if_not
+snippet fin "std::find_if_not" b
+if( auto ${1:it} = std::find_if_not(std::cbegin(${2:CONTAINER}), std::cend($2), [](const ${3:TYPE} &a)
+	{
+		return ${4:false};
+	}
+	);
+	$1 != std::cend($2)
+)
+{
+	$5
+}
+$0
+endsnippet
+
+# fnd find
+snippet fnd "std::find" b
+if(auto ${1:it} = std::find(std::cbegin(${2:CONTAINER}), std::cend($2), ${3:VALUE});
+	$1 != std::cend($2))
+{
+	$5
+}
+$0
+endsnippet
+
+# fne find_end
+snippet fne "std::find_end" b
+if(auto ${1:it} = std::find_end
+	(
+		std::cbegin(${2:SEARCH_CONTAINER}), std::cend($2),
+		std::cbegin(${3:SOURCE_SEQUENCE}), std::cend($3)
+	);
+	$1 != std::cend($2)
+)
+{
+	$4
+}
+$0
+endsnippet
+
+# fni find_if
+snippet fni "std::find_if" b
+if(auto ${1:it} = std::find_if(std::cbegin(${2:CONTAINER}), std::cend($2), [](const ${3:TYPE} &a)
+	{
+		return ${4:true};
+	}) != std::cend($2))
+{
+	$5
+}
+$0
+endsnippet
+
+# fep for_each
+snippet fep "std::for_each with predicate" b
+std::for_each(std::begin(${1:CONTAINER}), std::end($1), [](${2:TYPE} a)
+{
+	${3:FUNCTION}
+});
+endsnippet
+
+# fepc for_each
+snippet fepc "std::for_each with predicate and const" b
+std::for_each(std::cbegin(${1:CONTAINER}), std::cend($1), [](${2:TYPE} a)
+{
+	${3:FUNCTION}
+});
+endsnippet
+
+# fre for_each
+snippet fre "std::for_each" b
+std::for_each(std::begin(${1:CONTAINER}), std::end($1), ${2:FUNCTION});
+endsnippet
+
+# frec for_each const
+snippet frec "std::for_each const" b
+std::for_each(std::cbegin(${1:CONTAINER}), std::cend($1), ${2:FUNCTION});
+endsnippet
+
+# ihp is_heap
+# ihu is_heap_until
+# ipr is_permutation
+# ipt is_partitioned
+# iss is_sorted
+# isu is_sorted_until
+# lxc lexigraphical_compare
+# mme minmax_element
+# mne min_element
+# msm mismatch
+# mxe max_element
+# nno none_of
+snippet nno "std::none_of" b
+if(std::none_of(std::cbegin(${1:CONTAINER}), std::cend($1),[](const ${2:TYPE} &a)
+	{
+		return ${3:PREDICATE};
+	}))
+{
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+# ppt partition_point
+# srh search
+# srn search_n
+
+# ==============================================================================
+# Sorting
+# ==============================================================================
+# mkh make_heap
+# nth nth_element
+# phh push_heap
+# pph pop_heap
+# psc partial_sort_copy
+# pst partial_sort
+# ptc partition_copy
+# ptn partition
+# spt stable_partition
+# srt sort
+# sth sort_heap
+# sts stable_sort
+
+# ==============================================================================
+# Sorted Ranges
+# ==============================================================================
+# bns binary_search
+# eqr equal_range
+# erl equal_range
+# inc includes
+# ipm inplace_merge
+# lwb lower_bound
+# mrg merge
+# ssd set_symmetric_difference
+# std set_difference
+# stn set_intersection
+# stu set_union
+# ucp unique_copy
+# upb upper_bound
+
+# ==============================================================================
+# Modifying
+# ==============================================================================
+# cpb copy_backward
+# cpi copy_if
+# cpn copy_n
+# cpy copy
+
+# cpo copy to ostream
+snippet cpo "std::copy to ostream" b
+std::copy(std::cbegin(${1:CONTAINER}), std::cend($1),
+	std::ostream_iterator<${2:TYPE}>(${3:std::cout}, "${4:DELIMINATOR}")
+);
+endsnippet
+
+# fil fill
+# fln fill_n
+# gnn generate_n
+# gnr generate
+# ita iota
+# mov move
+# mvb move_backward
+# rci replace_copy_if
+# rpc replace_copy
+# rpi replace_if
+# rpl replace
+# swp swap
+# swr swap_ranges
+# tfm transform
+
+# ==============================================================================
+# Removing
+# ==============================================================================
+# rmc remove_copy
+# rmf remove_copy_if
+# rmi remove_if
+# rmv remove
+# uqe unique
+
+# ==============================================================================
+# Mutating
+# ==============================================================================
+# nxp next_permutation
+# prp prev_permutation
+# rtc rotate_copy
+# rte rotate
+# rvc reverse_copy
+# rvr reverse
+# shf random_shuffle
+
+# ==============================================================================
+# Numeric
+# ==============================================================================
+# acu accumulate
+snippet acu "std::accumulate" b
+auto ${1:sum} = std::accumulate(std::cbegin(${2:CONTAINER}), std::cend($2), ${3:INITIAL_VALUE});
+endsnippet
+
+snippet acuf "std::accumulate with function pointer" b
+auto ${1:sum} = std::accumulate(std::cbegin(${2:CONTAINER}), std::cend($2), ${3:INITIAL_VALUE}, ${4:FUNCTION});
+endsnippet
+
+snippet acup "std::accumulate with predicate" b
+auto ${1:sum} = std::accumulate(std::cbegin(${2:CONTAINER}), std::cend($2), ${3:INITIAL_VALUE},
+	[](const ${4:TYPE} &total, const $4 &el)
+	{
+		return ${5:OPERATION};
+	}
+);
+endsnippet
+
+# ==============================================================================
+# Idioms
+# ==============================================================================
+# erm erase
+
+# ==============================================================================
+# Strings
+# ==============================================================================
+# ltr string_trim_left
+snippet ltr "left trim a string" b
+${1:STRING}.erase(0, $1.find_first_not_of(" \t\n\r"));
+endsnippet
+
+# rtr string_trim_right
+snippet rtr "right trim a string" b
+${1:STRING}.erase($1.find_last_not_of(" \t\n\r") + 1);
+endsnippet
+
+# upr string_upper
+snippet upr "convert string to upper case" b
+std::transform(std::begin(${1:STRING}), std::end($1), std::begin($1), ::toupper);
+endsnippet
+
+# lwr string_lower
+snippet lwr "convert string to lower case" b
+std::transform(std::begin(${1:STRING}), std::end($1), std::begin($1), ::tolower);
+endsnippet
+
+# ==============================================================================
+# Streams
+# ==============================================================================
+# oit copy
+# sti cin
+# sto cout

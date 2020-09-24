@@ -16,17 +16,25 @@ endsnippet
 # ==============================================================================
 snippet ns "create a namespace" b
 /// \cond doxygen_namespace_$1
-namespace ${1:name}
+namespace ${1:NAME}
 {
 	${0:${VISUAL}}
 } /// \endcond namespace $1
+endsnippet
+
+snippet uns "using namespace" b
+using namespace ${1:NAME};
+endsnippet
+
+snippet nsa "namespace alias" b
+using ${1:ALIAS_NAME} = ${2:ORIGINAL_NAME};
 endsnippet
 
 # ==============================================================================
 # Classes
 # ==============================================================================
 snippet class "create a class" b
-class ${1:ClassName}
+class ${1:CLASS_NAME}
 {
 public:
 	$1();
