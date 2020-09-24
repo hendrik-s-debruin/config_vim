@@ -26,6 +26,14 @@ if(std::all_of(std::begin(${1:CONTAINER}), std::end($1),[](const ${2:TYPE} &a)
 $0
 endsnippet
 
+snippet alof "std::all_of with function" b
+if(std::all_of(std::cbegin(${1:CONTAINER}), std::end, ${2:FUNCTION}))
+{
+	${3:VISUAL}
+}
+$0
+endsnippet
+
 snippet aloc "std::all_of const" b
 if(std::all_of(std::cbegin(${1:CONTAINER}), std::cend($1),[](const ${2:TYPE} &a)
 	{
@@ -204,9 +212,21 @@ endsnippet
 # isu is_sorted_until
 # lxc lexigraphical_compare
 # mme minmax_element
+snippet mme "std::minmax_element" b
+auto [${1:min}, ${2:max}] = std::minmax_element(std::begin(${3:CONTAINER}), std::end($3));
+endsnippet
+
 # mne min_element
+snippet mne "std::min_element" b
+auto ${1:it} = std::min_element(std::begin(${2:CONTAINER}), std::end($2));
+endsnippet
+
 # msm mismatch
 # mxe max_element
+snippet mxe "std::max_element" b
+auto ${1:it} = std::max_element(std::begin(${2:CONTAINER}), std::end($2));
+endsnippet
+
 # nno none_of
 snippet nno "std::none_of" b
 if(std::none_of(std::cbegin(${1:CONTAINER}), std::cend($1),[](const ${2:TYPE} &a)
@@ -301,6 +321,14 @@ endsnippet
 # prp prev_permutation
 # rtc rotate_copy
 # rte rotate
+snippet lrt "std::rotate left" b
+std::rotate(std::begin(${1:CONTAINER}), std::begin($1) + ${2:1}, std::end($1));
+endsnippet
+
+snippet rrt "std::rotate right" b
+std::rotate(std::rbegin(${1:CONTAINER}), std::rbegin($1) + ${2:1}, std::rend($1));
+endsnippet
+
 # rvc reverse_copy
 # rvr reverse
 # shf random_shuffle

@@ -59,8 +59,8 @@ packadd vim-signature
 packadd supertab " required to play nicely with coc
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 packadd ultisnips
 
 source ~/.vim/pack/plugins/coc_bindings.vim
