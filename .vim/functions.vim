@@ -189,3 +189,31 @@ function! ToggleSpell()
 		set spell
 	endif
 endfunction
+
+" ==============================================================================
+" Soft wrap at specific line
+" ==============================================================================
+let g:should_wrap_at = 0
+function! WrapAt()
+	if g:should_wrap_at == 0
+		echo "Setting wrap"
+		let g:should_wrap_at = 1
+		augroup wrap_at
+			autocmd!
+			autocmd VimResized * set columns=80
+		augroup END
+		set columns=80
+		set wrap
+		noremap k gk
+		noremap j gj
+	else
+		echo "Unsetting wrap"
+		let l:width = getwininfo()
+		augroup wrap_at
+			autocmd!
+		augroup END
+		autocmd! wrap_at
+		let g:should_wrap_at = 0
+		set nowrap
+	endif
+endfunction
