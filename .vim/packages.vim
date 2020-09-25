@@ -14,14 +14,6 @@ packadd vim-toml
 packadd vim-glsl
 packadd vim-log-highlighting
 
-" Add some highlighting for previously unhighlighted groups. The links here are
-" probably semantically nonsensical, but they look nice with the gruvbox theme
-hi link LspCxxHlSymField     Special
-hi link LspCxxHlSymVariable  Identifier
-hi link LspCxxHlSymParameter Constant
-packadd vim-lsp-cxx-highlight
-
-
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque
 
@@ -31,6 +23,21 @@ let g:gruvbox_italic = '1'
 packadd gruvbox
 colorscheme industry
 colorscheme gruvbox
+
+" =========================== Semantic Highlighting ============================
+" 154 GreenYellow #AFFF00
+hi LspCxxHlSymStaticMethod ctermfg=154
+" 160 Red3 #d70000
+hi LspCxxHlSymUnknownStaticField ctermfg=160
+" hi link LspCxxHlSymField         Special
+hi LspCxxHlSymField ctermfg=178
+" 111 SkyBlue2 #87AFFF
+hi LspCxxHlSymVariable ctermfg=111
+" 151 DarkSeaGren2 #AFD7AF
+hi LspCxxHlSymLocalVariable ctermfg=151
+" 141: MediumPurple1 #AF87FF
+hi LspCxxHlSymParameter ctermfg=141
+packadd vim-lsp-cxx-highlight
 
 " Underline letters for quick navigation
 packadd quick-scope
