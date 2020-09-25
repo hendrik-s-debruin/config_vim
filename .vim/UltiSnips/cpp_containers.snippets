@@ -1,0 +1,113 @@
+# ==============================================================================
+# Sequence Containers
+# ==============================================================================
+# vec vector
+snippet vec "std::vector" b
+std::vector<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# arr array
+snippet arr "std::array" b
+std::array<${1:TYPE}, ${2:SIZE}> ${3:NAME};
+endsnippet
+
+# deq deque
+snippet deq "std::deque" b
+std::deque<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# fls forward_list
+snippet fls "std::forward_list" b
+std::forward_list<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# lst list
+snippet lst "std::list" b
+std::list<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# ==============================================================================
+# Container Adaptors
+# ==============================================================================
+# stk stack
+snippet stk "std::stack" b
+std::stack<${1:TYPE}, std::${2:vector}<$1>> ${3:NAME};
+endsnippet
+
+# que queue
+snippet que "std::queue" b
+std::queue<${1:TYPE}, std::${2:list}<$1>> ${3:NAME};
+endsnippet
+
+# pqu priority_queue
+snippet pqu "std::priority_queue" b
+std::priority_queue<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# pqa priority queue with standard predicate
+snippet pqa "std::priority_queue with standard predicate"
+std::priority_queue<${1:TYPE}, std::${2:vector}<$1>, std::${3:greater}> ${4:NAME};
+endsnippet
+
+# pqp priority_queue with predicate
+snippet pqp "std::priority_queue with custompredicate" b
+std::priority_queue<${1:TYPE}, std::${2:vector}<$1>, []($1 a, $1 b)
+	{
+		return ${3:PREDICATE};
+	}> ${4:NAME};
+$0
+endsnippet
+
+# ==============================================================================
+# Associative Containers
+# ==============================================================================
+# set set
+snippet set "std::set" b
+std::set<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# mst mulitset
+snippet mst "std::multiset" b
+std::multiset<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# map map
+snippet map "std::map" b
+std::map<${1:TYPE_1}, ${2:TYPE_2}> ${3:NAME};
+endsnippet
+
+# mmp multimap
+snippet mmp "std::multimap" b
+std::multimap<${1:TYPE_1}, ${2:TYPE_2}> ${3:NAME};
+endsnippet
+
+# ==============================================================================
+# Unordered Associative Containers
+# ==============================================================================
+# ust unordered_set
+snippet ust "std::unordered_set" b
+std::unordered_set<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# ums unordered_multiset
+snippet ums "std::unorderd_set" b
+std::unorderd_set<${1:TYPE}> ${2:NAME};
+endsnippet
+
+# ump unordered_map
+snippet ump "std::unordered_map" b
+std::unordered_map<${1:TYPE_1}, ${2:TYPE_2}> ${3:NAME};
+endsnippet
+
+# umm unordered_multimap
+snippet umm "std::unordered_multimap" b
+std::unordered_multimap<${1:TYPE_1}, ${2:TYPE_2}> ${3:NAME};
+endsnippet
+
+# ==============================================================================
+# Misc
+# ==============================================================================
+# str std::string
+snippet str "std::string"
+std::string
+endsnippet
