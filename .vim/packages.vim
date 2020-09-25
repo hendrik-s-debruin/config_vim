@@ -9,11 +9,18 @@
 " ============================ File type highlights ============================
 packadd cmakecache-syntax.vim
 packadd vim-cmake-syntax
-packadd vim-lsp-cxx-highlight
 packadd i3-vim-syntax
 packadd vim-toml
 packadd vim-glsl
 packadd vim-log-highlighting
+
+" Add some highlighting for previously unhighlighted groups. The links here are
+" probably semantically nonsensical, but they look nice with the gruvbox theme
+hi link LspCxxHlSymField     Special
+hi link LspCxxHlSymVariable  Identifier
+hi link LspCxxHlSymParameter Constant
+packadd vim-lsp-cxx-highlight
+
 
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque
