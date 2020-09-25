@@ -1,5 +1,4 @@
 " This file associates file extensions with their respective languages
-
 " CPP
 autocmd BufRead,BufNewFile *.tpp  set filetype=cpp
 
@@ -25,3 +24,6 @@ autocmd BufRead,BufNewFile *.gdb set filetype=gdb
 
 " Gazebo
 autocmd BufRead,BufNewFile *.world set filetype=xml
+
+" Conan (this is defining a new type not known to vim)
+autocmd BufRead,BufNewFile conanfile.txt  set filetype=conan

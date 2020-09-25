@@ -28,11 +28,14 @@ highlight SpellBad ctermbg=232 ctermfg=202
 " ~/.vim/UltiSnips/cpp_memory.snippets
 " ~/.vim/UltiSnips/gitcommit.snippets
 " ~/.vim/UltiSnips/snippets.snippets
+" ~/.vim/Ultisnips/cmake.snippets
+" ~/.vim/Ultisnips/conan.snippets
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim
 " ~/.vim/after/syntax/cpp.vim
 " ~/.vim/conceal/operators.vim
+" ~/.vim/after/syntax/conan.vim
 
 " =========================== Settings for Filetypes ===========================
 " ~/.vim/after/ftplugin/c.vim

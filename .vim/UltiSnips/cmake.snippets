@@ -1,0 +1,5 @@
+snippet init "initialise defaults" b
+cmake_minimum_required(VERSION `cmake --version | head -n 1 | awk '{print $3}'`)
+project(${1:PROJECT_NAME} VERSION 0.0.0)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+endsnippet
