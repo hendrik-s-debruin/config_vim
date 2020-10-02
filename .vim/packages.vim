@@ -18,25 +18,13 @@ packadd vim-log-highlighting
 packadd vim-coloresque
 
 " Theme
-let g:gruvbox_guisp_fallback = "bg"
-let g:gruvbox_italic = '1'
+source ~/.vim/pack/plugins/settings_gruvbox.vim
 packadd gruvbox
 colorscheme industry
 colorscheme gruvbox
 
 " =========================== Semantic Highlighting ============================
-" 154 GreenYellow #AFFF00
-hi LspCxxHlSymStaticMethod ctermfg=154
-" 111 SkyBlue2 #87AFFF
-hi LspCxxHlSymUnknownStaticField ctermfg=111
-" hi link LspCxxHlSymField         Special
-hi LspCxxHlSymField ctermfg=151
-" 160 Red3 #d70000
-hi LspCxxHlSymVariable ctermfg=160
-" 151 DarkSeaGren2 #AFD7AF
-hi LspCxxHlSymLocalVariable ctermfg=178
-" 141: MediumPurple1 #AF87FF
-hi LspCxxHlSymParameter ctermfg=141
+source ~/.vim/pack/plugins/settings_lsp_cxx_highlight.vim
 packadd vim-lsp-cxx-highlight
 
 " Underline letters for quick navigation
@@ -45,23 +33,7 @@ packadd quick-scope
 " Highlight uses of the word under the cursor
 packadd vim-illuminate
 
-" rainbow does not play nicely with vim-cmake-syntax
-function! ConditionalStartRainbowPlugin()
-	if &ft == "cmake"
-		:RainbowToggleOff
-	else
-		:RainbowToggleOn
-	endif
-endfunction
-
-augroup EnableRainbowPlugin
-	autocmd!
-	autocmd BufEnter * :call ConditionalStartRainbowPlugin()
-augroup END
-
-let g:rainbow_active = 1
-packadd rainbow
-
+source ~/.vim/pack/plugins/settings_rainbow.vim
 packadd vim-search-pulse
 
 " Show file marks
@@ -71,18 +43,12 @@ packadd vim-signature
 " Completions
 " ==============================================================================
 packadd supertab " required to play nicely with coc
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-l>"
-let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+
+source ~/.vim/pack/plugins/settings_ultisnip.vim
 packadd ultisnips
 
-source ~/.vim/pack/plugins/coc_bindings.vim
+source ~/.vim/pack/plugins/settings_coc.vim
 packadd coc.nvim
-augroup CocDisableForCertainFiletypes
-	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave COMMIT_EDITMSG CocDisable
-augroup END
 
 packadd emmet-vim
 
@@ -94,56 +60,33 @@ packadd emmet-vim
 " ==============================================================================
 packadd editorconfig-vim
 
+source ~/.vim/pack/plugins/settings_flog.vim
 packadd vim-flog
-" Show git log graph with format: [hash] {author name} (branch name) message
-nnoremap <leader>gl :Flog -format=[%h]\ {%an}%d\ %s<CR>
 
+
+source ~/.vim/pack/plugins/settings_ack.vim
 packadd ack.vim
-" use ag if available
-if executable('ag')
-	let g:ackprg = 'ag --vimgrep'
-endif
 
 packadd fcitx.vim
 
+source ~/.vim/pack/plugins/settings_fzf.vim
 packadd fzf
-nnoremap <leader>b :FZF<Enter>
 
+source ~/.vim/pack/plugins/settings_fuzzysearch.vim
 packadd vim-fuzzysearch
-nnoremap <leader>/ :FuzzySearch<Enter>
 
-let g:gutentags_ctags_tagfile=".tags"
+source ~/.vim/pack/plugins/settings_gutentags.vim
 packadd vim-gutentags
 
+source ~/.vim/pack/plugins/settings_fugitive.vim
 packadd vim-fugitive
-nnoremap <leader>gb :Gblame<Enter>
 
+source ~/.vim/pack/plugins/settings_sourcetrail.vim
 packadd vim-sourcetrail
-let g:SourceTrailServerIsOn = 0
-function! SourceTrailToggleServer()
-	if g:SourceTrailServerIsOn == 1
-		:SourcetrailStopServer
-		let g:SourceTrailServerIsOn = 0
-		echo "Disabling Source Trail Server"
-	else
-		:SourcetrailStartServer
-		let g:SourceTrailServerIsOn = 1
-		echo "Enabling Source Trail Server"
-	endif
-endfunction
-nnoremap <leader>aaa   :call SourceTrailToggleServer()<Enter>
-nnoremap <leader>aa    :SourcetrailRefresh<CR>
-nnoremap <leader>as    :SourcetrailActivateToken<CR>
-nnoremap <C-LeftMouse> :SourcetrailActivateToken<CR>
-
 " ==============================================================================
 " Behaviours
 " ==============================================================================
-" Add word motions for CamelCase and underscore_case
-map <silent> w  <Plug>CamelCaseMotion_w
-map <silent> b  <Plug>CamelCaseMotion_b
-map <silent> e  <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
+source ~/.vim/pack/plugins/settings_camel_case_motion.vim
 packadd CamelCaseMotion
 
 packadd  comfortable-motion.vim
@@ -155,16 +98,13 @@ packadd vim-markdown-folding
 " ==============================================================================
 packadd DrawIt
 
+source ~/.vim/pack/plugins/settings_nerdtree.vim
 packadd nerdtree
-let NERDTreeMinimalUI=1
-noremap <leader>nt :NERDTreeToggle<Enter>
-noremap <leader>ntf :NERDTreeFind<Enter>
 
+source ~/.vim/pack/plugins/settings_undotree.vim
 packadd undotree
-noremap <leader>ut :UndotreeToggle<Enter>
 
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+source ~/.vim/pack/plugins/settings_easy_align.vim
 packadd vim-easy-align
 
 packadd vim-commentary
@@ -173,19 +113,17 @@ packadd vim-gitgutter
 
 packadd vim-startify
 
+source ~/.vim/pack/plugins/settings_table_mode.vim
 packadd vim-table-mode
-nnoremap <leader>tr :TableModeRealign<Enter>
 
-let g:extra_whitespace_ignored_filetypes = ['floggraph', 'git']
+source ~/.vim/pack/plugins/settings_trailing_white_space.vim
 packadd vim-trailing-whitespace
-noremap <leader>w :FixWhitespace<Enter>
 
-let g:winresizer_start_key = '<leader>e'
+source ~/.vim/pack/plugins/settings_winresizer.vim
 packadd winresizer
 
-let g:airline_powerline_fonts = 1
-" do not show the mode, as this is shown already inside of the powerline
-set noshowmode
+source ~/.vim/pack/plugins/settings_powerline.vim
+
 packadd vim-airline
 
 packadd vim-CtrlXA

@@ -33,3 +33,8 @@ endfunction
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+augroup CocDisableForCertainFiletypes
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave COMMIT_EDITMSG CocDisable
+augroup END
