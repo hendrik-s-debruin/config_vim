@@ -130,3 +130,6 @@
 [submodule ".vim/pack/plugins/opt/vim-log-highlighting"]
 	path = .vim/pack/plugins/opt/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting.git
+[submodule ".vim/pack/plugins/opt/goyo.vim"]
+	path = .vim/pack/plugins/opt/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git

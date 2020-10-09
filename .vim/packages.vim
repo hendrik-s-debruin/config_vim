@@ -39,6 +39,9 @@ packadd vim-search-pulse
 " Show file marks
 packadd vim-signature
 
+" Writing text
+packadd goyo.vim
+
 " ==============================================================================
 " Completions
 " ==============================================================================
