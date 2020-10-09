@@ -25,3 +25,5 @@ noremap <leader>s4 :call SecMinor("-")<Enter>
 noremap <leader>c  :call ToggleConcealLevel()<Enter>
 noremap <leader>ss :call ToggleSpell()<Enter>
 noremap <leader>we :call WrapAt()<CR>
+noremap <leader>oo :only<CR>
+noremap <leader>OO :Only<CR>
