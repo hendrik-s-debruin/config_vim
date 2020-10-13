@@ -133,3 +133,6 @@
 [submodule ".vim/pack/plugins/opt/goyo.vim"]
 	path = .vim/pack/plugins/opt/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule ".vim/pack/plugins/opt/suckless.vim"]
+	path = .vim/pack/plugins/opt/suckless.vim
+	url = https://github.com/fabi1cazenave/suckless.vim.git
