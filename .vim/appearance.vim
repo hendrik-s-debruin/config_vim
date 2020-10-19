@@ -23,3 +23,5 @@ augroup highlightcursorline
 	autocmd VimEnter,WinEnter * set cursorline
 	autocmd WinLeave * set nocursorline
 augroup END
+
+highlight SpellBad ctermbg=232 ctermfg=202
