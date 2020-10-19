@@ -38,3 +38,16 @@ augroup CocDisableForCertainFiletypes
 	autocmd!
 	autocmd BufEnter,FocusGained,InsertLeave COMMIT_EDITMSG CocDisable
 augroup END
+
+let g:coc_show_warning_highlights = 1
+function! TriggerCocWarnings()
+	" Turn off warning highlighting
+	if g:coc_show_warning_highlights == 1
+		let g:coc_show_warning_highlights = 0
+		highlight! link CocWarningHighlight SomeDummyThingForCocThatLinksToNothing
+	else
+		let g:coc_show_warning_highlights = 1
+		highlight link CocWarningHighlight NONE
+	endif
+endfunction
+nmap <leader>cw :call TriggerCocWarnings()<CR>
