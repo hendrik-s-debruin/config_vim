@@ -1,6 +1,7 @@
 " This file sets the general appearance of the editor
 
 syntax on
+set termguicolors
 set ruler
 set showcmd
 set hlsearch

@@ -17,16 +17,6 @@ packadd vim-log-highlighting
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque
 
-" Theme
-source ~/.vim/pack/plugins/settings_gruvbox.vim
-packadd gruvbox
-colorscheme industry
-colorscheme gruvbox
-
-" =========================== Semantic Highlighting ============================
-source ~/.vim/pack/plugins/settings_lsp_cxx_highlight.vim
-packadd vim-lsp-cxx-highlight
-
 " Underline letters for quick navigation
 packadd quick-scope
 
@@ -133,3 +123,15 @@ source ~/.vim/pack/plugins/settings_powerline.vim
 packadd vim-airline
 
 packadd vim-CtrlXA
+
+" ==============================================================================
+" Theme
+" ==============================================================================
+packadd gruvbox
+source ~/.vim/pack/plugins/settings_gruvbox.vim
+colorscheme gruvbox
+
+" =========================== Semantic Highlighting ============================
+packadd vim-lsp-cxx-highlight
+source ~/.vim/pack/plugins/settings_lsp_cxx_highlight.vim
+

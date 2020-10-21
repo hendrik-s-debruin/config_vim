@@ -1,12 +1,6 @@
-" 154 GreenYellow #AFFF00
-hi LspCxxHlSymStaticMethod ctermfg=154
-" 111 SkyBlue2 #87AFFF
-hi LspCxxHlSymUnknownStaticField ctermfg=111
-" hi link LspCxxHlSymField         Special
-hi LspCxxHlSymField ctermfg=151
-" 160 Red3 #d70000
-hi LspCxxHlSymVariable ctermfg=160
-" 151 DarkSeaGren2 #AFD7AF
-hi LspCxxHlSymLocalVariable ctermfg=178
-" 141: MediumPurple1 #AF87FF
-hi LspCxxHlSymParameter ctermfg=141
+hi LspCxxHlSymStaticMethod guifg=#8ca4db cterm=bold
+hi LspCxxHlSymUnknownStaticField guifg=#aad9dd
+hi LspCxxHlSymField guifg=#90D181
+hi LspCxxHlSymVariable guifg=#C16A4D
+hi LspCxxHlSymLocalVariable guifg=#d3c896
+hi LspCxxHlSymParameter guifg=#a581d1
