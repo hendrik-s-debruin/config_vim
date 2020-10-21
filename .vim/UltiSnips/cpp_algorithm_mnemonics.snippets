@@ -28,7 +28,7 @@ $0
 endsnippet
 
 snippet alof "std::all_of with function" b
-if(std::all_of(std::cbegin(${1:CONTAINER}), std::end, ${2:FUNCTION}))
+if(std::all_of(std::cbegin(${1:CONTAINER}), std::cend($1), ${2:FUNCTION}))
 {
 	${3:VISUAL}
 }

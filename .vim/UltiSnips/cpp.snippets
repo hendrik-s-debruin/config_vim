@@ -66,3 +66,10 @@ for(const auto &${1:el} : ${2:CONTAINER})
 }
 $0
 endsnippet
+
+# ==============================================================================
+# Sleep
+# ==============================================================================
+snippet sleep "sleep" b
+std::this_thread::sleep_for(std::chrono::${1:milliseconds}(${2:TIME}));
+endsnippet
