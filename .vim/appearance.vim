@@ -32,4 +32,4 @@ augroup highlightcursorline
 	autocmd WinLeave * set nocursorline
 augroup END
 
-highlight SpellBad ctermbg=232 ctermfg=202
+highlight SpellBad guifg=#cc241d cterm=underline,italic
