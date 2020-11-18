@@ -1,0 +1,382 @@
+snippet init "initialise document" b
+\documentclass{article}
+	\usepackage{graphicx}
+	\graphicspath{ {img/} }
+	\usepackage{amsmath}
+	\usepackage{amssymb}
+\begin{document}
+	$1
+\end{document}
+endsnippet
+
+snippet cmd "surround by a command"
+${1:COMMAND NAME}{${VISUAL}}
+endsnippet
+
+snippet sec "section" b
+\section{${1:${VISUAL}}}
+endsnippet
+
+snippet sec2 "subsection" b
+\subsection{${1:${VISUAL}}}
+endsnippet
+
+snippet sec3 "subsubsection" b
+\subsubsection{${1:${VISUAL}}}
+endsnippet
+
+snippet sec4 "paragraph" b
+\paragraph{${1:${VISUAL}}}
+endsnippet
+
+snippet begin "begin environment" b
+\begin{${1:ENVIRONMENT}}
+	$2
+\end{$1}
+endsnippet
+
+snippet line "underline" w
+\underline{${1:${VISUAL}}}
+endsnippet
+
+snippet emph "emphasize" w
+\emph{${1${VISUAL}}}
+endsnippet
+
+snippet ol "ordered list"
+\begin{enumerate}
+
+	\item $1
+
+\end{enumerate}
+endsnippet
+
+snippet ul "unordered list"
+\begin{itemize}
+
+	\item $1
+
+\end{itemize}
+endsnippet
+
+snippet li "list item"
+\item $1
+endsnippet
+
+snippet tab "table"
+\begin{tabular}{${1:c c}}
+	\hline
+	${2:TABLE HEAD} \\\\
+	\hline
+	$3
+\end{tabular}
+endsnippet
+
+snippet table "full table"
+\begin{table}[ht]
+	\caption{${1:CAPTION}}
+	\label{fig:`!p snip.rv = t[1].replace(" ", "_").lower()`}
+
+	\begin{tabular}{${1:c c}}
+		\hline
+		${2:TABLE HEAD} \\\\
+		\hline
+		$3
+	\end{tabular}
+
+\end{table}
+endsnippet
+
+snippet img "insert image"
+\includegraphics[width=$1\textwidth]{${2:IMAGE}}
+endsnippet
+
+snippet fig "insert full figure"
+\begin{figure}[hb]
+	\includegraphics[width=$1\textwidth]{${2:IMAGE}}
+	\caption{${3:CAPTION}}
+	\label{fig:`!p snip.rv = t[3].replace(" ", "_").lower()`}
+\end{figure}
+endsnippet
+
+# ==============================================================================
+# Math
+# ==============================================================================
+
+snippet eq "equation" b
+\begin{equation}
+	$1
+	\label{eq:${2:LABEL}}
+\end{equation}
+endsnippet
+
+snippet al "align" b
+\begin{align}
+	$1
+\end{align}
+endsnippet
+
+snippet math "display math" b
+\[
+	$1
+\]
+endsnippet
+
+# ==============================================================================
+# Trig and Functions
+# ==============================================================================
+snippet sn "sin" w
+\sin
+endsnippet
+
+snippet cs "cos" w
+\cos
+endsnippet
+
+snippet tn "tan" w
+\tan
+endsnippet
+
+snippet ct "cot" w
+\cot
+endsnippet
+
+snippet csc "cosec" w
+\csc
+endsnippet
+
+snippet sc "sec" w
+\sec
+endsnippet
+
+snippet acs "arccos" w
+\arccos
+endsnippet
+
+snippet asn "arcsin" w
+\arcsin
+endsnippet
+
+snippet atn "arctan" w
+\arctan
+endsnippet
+
+# ==============================================================================
+# Operations
+# ==============================================================================
+snippet lim "limit" w
+\lim_{${1:x \rightarrow 0}}
+endsnippet
+
+snippet sum "sumation" w
+\sum_{${1:i = 1}}^{${2:n}}
+endsnippet
+
+snippet int "integral" w
+\int_{${1:0}}^{${2:\frac{\pi}{2}}}
+endsnippet
+
+snippet prod "product" w
+\prod_{${1:i = 1}}^{${2:n}}
+endsnippet
+
+# ==============================================================================
+# Symbols
+# ==============================================================================
+snippet la "left arrow" w
+\leftarrow
+endsnippet
+
+snippet ra "right arrow" w
+\rightarrow
+endsnippet
+
+snippet fa "for all" w
+\forall
+endsnippet
+
+snippet fe "for each" w
+\forall
+endsnippet
+
+snippet ex "exists" w
+\exists
+endsnippet
+
+# ==============================================================================
+# Matrices
+# ==============================================================================
+snippet mat "matrix" w
+\left[
+	\begin{matrix}
+		$1
+	\end{matrix}
+\right]
+endsnippet
+
+# ==============================================================================
+# Greek Letters
+# ==============================================================================
+snippet a "alpha" w
+\alpha
+endsnippet
+
+snippet A "Alpha" w
+\Alpha
+endsnippet
+
+snippet b "beta" w
+\beta
+endsnippet
+
+snippet B "Beta" w
+\Beta
+endsnippet
+
+snippet g "gamma" w
+\gamma
+endsnippet
+
+snippet G "Gamma" w
+\Gamma
+endsnippet
+
+snippet e "epsilon" w
+\epsilon
+endsnippet
+
+snippet E "Epsilon" w
+\Epsilon
+endsnippet
+
+snippet z "zeta" w
+\zeta
+endsnippet
+
+snippet Z "Zeta" w
+\Zeta
+endsnippet
+
+snippet et "eta" w
+\eta
+endsnippet
+
+snippet Et "Eta" w
+\Eta
+endsnippet
+
+snippet th "theta" w
+\theta
+endsnippet
+
+snippet Th "Theta" w
+\Theta
+endsnippet
+
+snippet i "iota" w
+\iota
+endsnippet
+
+snippet I "Iota" w
+\Iota
+endsnippet
+
+snippet k "kappa" w
+\kappa
+endsnippet
+
+snippet K "Kapa" w
+\Kapa
+endsnippet
+
+snippet l "lambda" w
+\lambda
+endsnippet
+
+snippet L "Lambda" w
+\Lambda
+endsnippet
+
+snippet m "mu" w
+\mu
+endsnippet
+
+snippet M "Mu" w
+\Mu
+endsnippet
+
+snippet n "nu" w
+\nu
+endsnippet
+
+snippet N "Nu" w
+\Nu
+endsnippet
+
+snippet x "xi" w
+\xi
+endsnippet
+
+snippet X "Xi" w
+\Xi
+endsnippet
+
+snippet p "pi" w
+\pi
+endsnippet
+
+snippet P "Pi" w
+\Pi
+endsnippet
+
+snippet r "rho" w
+\rho
+endsnippet
+
+snippet R "Rho" w
+\Rho
+endsnippet
+
+snippet s "sigma" w
+\sigma
+endsnippet
+
+snippet S "Sigma" w
+\Sigma
+endsnippet
+
+snippet t "tau" w
+\tau
+endsnippet
+
+snippet T "Tau" w
+\Tau
+endsnippet
+
+snippet y "upsilon" w
+\upsilon
+endsnippet
+
+snippet Y "Upsilon" w
+\Upsilon
+endsnippet
+
+snippet f "phi" w
+\phi
+endsnippet
+
+snippet F "Phi" w
+\Phi
+endsnippet
+
+snippet ps "psi" w
+\psi
+endsnippet
+
+snippet o "omega" w
+\omega
+endsnippet
+
+snippet O "Omega" w
+\Omega
+endsnippet

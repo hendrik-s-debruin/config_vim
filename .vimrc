@@ -24,8 +24,9 @@ source ~/.vim/appearance.vim
 " ~/.vim/UltiSnips/cpp_memory.snippets
 " ~/.vim/UltiSnips/gitcommit.snippets
 " ~/.vim/UltiSnips/snippets.snippets
-" ~/.vim/Ultisnips/cmake.snippets
-" ~/.vim/Ultisnips/conan.snippets
+" ~/.vim/UltiSnips/cmake.snippets
+" ~/.vim/UltiSnips/conan.snippets
+" ~/.vim/UltiSnips/tex.snippets
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim

@@ -27,3 +27,6 @@ autocmd BufRead,BufNewFile *.world set filetype=xml
 
 " Conan (this is defining a new type not known to vim)
 autocmd BufRead,BufNewFile conanfile.txt  set filetype=conan
+
+" default version of tex when opening a .tex file
+let g:tex_flavor="latex"
