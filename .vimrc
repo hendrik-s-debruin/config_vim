@@ -1,14 +1,34 @@
-set encoding=utf-8
-set nocompatible
-packadd! termdebug
-packadd! matchit
+function! s:isPasswordFile()
+	let filename = expand('%')
+	let test1 = (match(filename, '/dev/shm/pass.*txt') == 0)
+	let test2 = (match(filename, '$TMPDIR/pass.*txt') == 0)
+	let test3 = (match(filename, '/tmp/pass.*txt') == 0)
+	if test1 || test2 || test3
+		return 1
+	else
+		return 0
+	endif
+endfunction
 
-source ~/.vim/behaviour.vim
-source ~/.vim/filetype.vim
-source ~/.vim/functions.vim
-source ~/.vim/bindings.vim
-source ~/.vim/packages.vim
-source ~/.vim/appearance.vim
+if s:isPasswordFile()
+	set nobackup
+	set nowritebackup
+	set noswapfile
+	set viminfo=
+	set noundofile
+	echomsg "Editing password file - disabling all plugins"
+else
+	set encoding=utf-8
+	set nocompatible
+	packadd! termdebug
+	packadd! matchit
+	source ~/.vim/behaviour.vim
+	source ~/.vim/filetype.vim
+	source ~/.vim/functions.vim
+	source ~/.vim/bindings.vim
+	source ~/.vim/packages.vim
+	source ~/.vim/appearance.vim
+endif
 
 " ==============================================================================
 " Bookmarks
