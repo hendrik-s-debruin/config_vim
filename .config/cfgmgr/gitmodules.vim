@@ -136,3 +136,6 @@
 [submodule ".vim/pack/plugins/opt/suckless.vim"]
 	path = .vim/pack/plugins/opt/suckless.vim
 	url = https://github.com/fabi1cazenave/suckless.vim.git
+[submodule ".vim/pack/plugins/opt/rust.vim"]
+	path = .vim/pack/plugins/opt/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
