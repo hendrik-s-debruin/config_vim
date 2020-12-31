@@ -27,3 +27,4 @@ noremap <leader>ss :call ToggleSpell()<Enter>
 noremap <leader>we :call WrapAt()<CR>
 noremap <leader>oo :only<CR>
 noremap <leader>OO :Only<CR>
+noremap <leader>sg :call SynGroup()<CR>
