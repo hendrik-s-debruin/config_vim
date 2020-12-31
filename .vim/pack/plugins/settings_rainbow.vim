@@ -1,6 +1,6 @@
-" rainbow does not play nicely with vim-cmake-syntax
+" rainbow does not play nicely with vim-cmake-syntax or wasm
 function! ConditionalStartRainbowPlugin()
-	if &ft == "cmake"
+	if &ft == "cmake" || &ft == "wast"
 		:RainbowToggleOff
 	else
 		:RainbowToggleOn
