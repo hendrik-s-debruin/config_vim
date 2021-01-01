@@ -47,6 +47,7 @@ endif
 " ~/.vim/UltiSnips/cmake.snippets
 " ~/.vim/UltiSnips/conan.snippets
 " ~/.vim/UltiSnips/tex.snippets
+" ~/.vim/UltiSnips/rust.snippets
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim
