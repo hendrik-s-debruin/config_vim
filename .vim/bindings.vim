@@ -28,3 +28,7 @@ noremap <leader>we :call WrapAt()<CR>
 noremap <leader>oo :only<CR>
 noremap <leader>OO :Only<CR>
 noremap <leader>sg :call SynGroup()<CR>
+
+if &diff
+	noremap Q :qall!<CR>
+endif
