@@ -3,3 +3,23 @@ cmake_minimum_required(VERSION `cmake --version | head -n 1 | awk '{print $3}'`)
 project(${1:PROJECT_NAME} VERSION 0.0.0)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 endsnippet
+
+snippet mod "create module" b
+add_library(${1:MODULE_NAME}
+	${2:SRC}
+)
+
+target_include_directories($1
+	PUBLIC
+		include
+	PRIVATE
+		src
+)
+
+target_link_libraries($1
+	PRIVATE
+		${3:LINK_LIBS}
+)
+
+add_library(${4:NAMESPACE}::$1 ALIAS $1)
+endsnippet
