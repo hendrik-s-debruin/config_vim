@@ -88,8 +88,8 @@ packadd  comfortable-motion.vim
 
 packadd vim-markdown-folding
 
-source ~/.vim/pack/plugins/settings_suckless.vim
-packadd suckless.vim
+" source ~/.vim/pack/plugins/settings_suckless.vim
+" packadd suckless.vim
 
 " ==============================================================================
 " Vim Augmentations
