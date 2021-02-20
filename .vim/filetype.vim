@@ -1,6 +1,9 @@
 " This file associates file extensions with their respective languages
 " CPP
 autocmd BufRead,BufNewFile *.tpp  set filetype=cpp
+autocmd BufRead,BufNewFile *.hpp  set syntax=cpp.doxygen
+autocmd BufRead,BufNewFile *.cpp  set syntax=cpp.doxygen
+autocmd BufRead,BufNewFile *.tpp  set syntax=cpp.doxygen
 
 " GLSL
 autocmd BufRead,BufNewFile *.vs   set filetype=glsl
