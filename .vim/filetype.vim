@@ -1,9 +1,17 @@
 " This file associates file extensions with their respective languages
 " CPP
-autocmd BufRead,BufNewFile *.tpp  set filetype=cpp
-autocmd BufRead,BufNewFile *.hpp  set syntax=cpp.doxygen
-autocmd BufRead,BufNewFile *.cpp  set syntax=cpp.doxygen
-autocmd BufRead,BufNewFile *.tpp  set syntax=cpp.doxygen
+function s:SetupCPP()
+	set filetype=cpp
+	set syntax=cpp.doxygen
+	hi link doxygenParam                GruvboxAqua
+	hi link doxygenSpecial              GruvboxAqua
+	hi link doxygenSmallSpecial         GruvboxAqua
+	hi link doxygenParamName            GruvboxBlue
+	hi link doxygenBriefL               GruvboxFg3
+	hi link doxygenSpecialMultilineDesc GruvboxFg0
+	hi link doxygenStartL               GruvboxBg4
+endfunction
+autocmd BufRead,BufNewFile *.tpp,*.hpp,*.cpp call s:SetupCPP()
 
 " GLSL
 autocmd BufRead,BufNewFile *.vs   set filetype=glsl
