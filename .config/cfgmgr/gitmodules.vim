@@ -139,3 +139,6 @@
 [submodule ".vim/pack/plugins/opt/rust.vim"]
 	path = .vim/pack/plugins/opt/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule ".vim/pack/plugins/opt/vimwiki"]
+	path = .vim/pack/plugins/opt/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

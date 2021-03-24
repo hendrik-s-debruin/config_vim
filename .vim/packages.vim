@@ -111,6 +111,9 @@ packadd vim-gitgutter
 
 packadd vim-startify
 
+source ~/.vim/pack/plugins/settings_vimwiki.vim
+packadd vimwiki
+
 source ~/.vim/pack/plugins/settings_table_mode.vim
 packadd vim-table-mode
 
