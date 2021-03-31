@@ -142,3 +142,6 @@
 [submodule ".vim/pack/plugins/opt/vimwiki"]
 	path = .vim/pack/plugins/opt/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule ".vim/pack/plugins/opt/vim-markdown"]
+	path = .vim/pack/plugins/opt/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
