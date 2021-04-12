@@ -145,3 +145,6 @@
 [submodule ".vim/pack/plugins/opt/vim-markdown"]
 	path = .vim/pack/plugins/opt/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule ".vim/pack/plugins/opt/calendar-vim"]
+	path = .vim/pack/plugins/opt/calendar-vim
+	url = https://github.com/mattn/calendar-vim.git

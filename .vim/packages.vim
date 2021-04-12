@@ -112,6 +112,8 @@ packadd vim-gitgutter
 
 packadd vim-startify
 
+packadd calendar-vim
+
 source ~/.vim/pack/plugins/settings_vimwiki.vim
 packadd vimwiki
 
