@@ -36,6 +36,7 @@ autocmd BufRead,BufNewFile *.gdb set filetype=gdb
 " Gazebo
 autocmd BufRead,BufNewFile *.world set filetype=xml
 autocmd BufRead,BufNewFile *.sdf set filetype=xml
+autocmd BufRead,BufNewFile model.config set filetype=xml
 
 " Conan (this is defining a new type not known to vim)
 autocmd BufRead,BufNewFile conanfile.txt  set filetype=conan
