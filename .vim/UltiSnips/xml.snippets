@@ -1,0 +1,50 @@
+# ==============================================================================
+# Gazebo
+# ==============================================================================
+# ============================== SDF Config File ===============================
+snippet config "Skeleton of the config file for a sdf model" b
+<?xml version="1.0"?>
+<model>
+	<name>${1:MODEL NAME}</name>
+	<version>1.0</version>
+	<sdf version="1.4">${2:FILE_NAME}.sdf</sdf>
+
+	<author>
+		<name>${3:`whoami`}</name>
+		<email>${4:`git config user.email`}</email>
+	</author>
+
+	<description>
+		${5: ROBOT DESCRIPTION}
+	</description>
+</model>
+endsnippet
+
+# ================================== SDF file ==================================
+snippet sdf "SDF skeleton" b
+<?xml version="1.0"?>
+<sdf version="1.4">
+	<model name="${1:ROBOT_NAME}">
+		<static>${2:true}</static>
+
+		<link name="${3:LINK_NAME}">
+			<pose>0 0 0 0 0 0</psoe>
+			<collision name="${4:collision"}>
+				<geometry>
+					<box>
+						<size>.4 .2 .1</size>
+					</box>
+				</geometry>
+			</collision>
+			<visual name="${4:visual"}>
+				<geometry>
+					<box>
+						<size>.4 .2 .1</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+	</model>
+</sdf>
+endsnippet
