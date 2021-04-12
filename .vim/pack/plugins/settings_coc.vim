@@ -1,3 +1,30 @@
+" ==============================================================================
+" Extensions to auto install
+" ==============================================================================
+let g:coc_global_extensions = ['coc-json',
+	\ 'coc-git',
+	\ 'coc-clangd',
+	\ 'coc-python',
+	\ 'coc-rls',
+	\ 'coc-rust-analyzer',
+	\ 'coc-clang-format-style-options',
+	\ 'coc-cmake',
+	\ 'coc-css',
+	\ 'coc-emmet',
+	\ 'coc-html',
+	\ 'coc-html-css-support',
+	\ 'coc-markdownlint',
+	\ 'coc-sh',
+	\ 'coc-snippets',
+	\ 'coc-spell-checker',
+	\ 'coc-svg',
+	\ 'coc-yaml',
+	\ 'coc-glslx',
+	\ 'coc-xml' ]
+
+" ==============================================================================
+" General Settings
+" ==============================================================================
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
