@@ -45,7 +45,7 @@ function! MarkdownSectionMinor(level)
 endfunction!
 
 " Bindings
-noremap <leader>c :call MarkdownCodeBlock()<Enter>
+noremap <leader>c  :call MarkdownCodeBlock()<Enter>
 noremap <leader>s1 :call MarkdownSectionMajor('=')<Enter>
 noremap <leader>s2 :call MarkdownSectionMajor('-')<Enter>
 noremap <leader>s3 :call MarkdownSectionMinor(3)<Enter>

@@ -54,14 +54,11 @@ endif
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim
-" ~/.vim/after/syntax/cpp.vim
-" ~/.vim/conceal/operators.vim
 " ~/.vim/after/syntax/conan.vim
 
 " =========================== Settings for Filetypes ===========================
 " ~/.vim/after/ftplugin/c.vim
 " ~/.vim/after/ftplugin/fugitiveblame.vim
 " ~/.vim/after/ftplugin/gitcommit.vim
-" ~/.vim/after/ftplugin/markdown.vim
 " ~/.vim/after/ftplugin/python.vim
 " ~/.vim/after/ftplugin/tex.vim
