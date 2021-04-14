@@ -46,3 +46,6 @@ let g:tex_flavor="latex"
 
 " Wasm: do not use lisp indentation rules
 autocmd BufRead,BufNewFile *wat,*wast set indentexpr=""
+
+" Wiki
+autocmd BufRead,BufNewFile *.wiki set filetype=vimwiki
