@@ -46,9 +46,6 @@ packadd coc.nvim
 
 packadd emmet-vim
 
-" packadd syntastic
-" packadd vim-hardtime
-
 " ==============================================================================
 " Integrations
 " ==============================================================================
@@ -88,9 +85,6 @@ packadd CamelCaseMotion
 packadd  comfortable-motion.vim
 
 packadd vim-markdown-folding
-
-" source ~/.vim/pack/plugins/settings_suckless.vim
-" packadd suckless.vim
 
 " ==============================================================================
 " Vim Augmentations
@@ -142,4 +136,3 @@ colorscheme gruvbox
 " =========================== Semantic Highlighting ============================
 packadd vim-lsp-cxx-highlight
 source ~/.vim/pack/plugins/settings_lsp_cxx_highlight.vim
-

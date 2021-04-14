@@ -25,9 +25,6 @@
 [submodule ".vim/pack/plugins/opt/rainbow"]
 	path = .vim/pack/plugins/opt/rainbow
 	url = https://github.com/luochen1990/rainbow.git
-[submodule ".vim/pack/plugins/opt/syntastic"]
-	path = .vim/pack/plugins/opt/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/pack/plugins/opt/undotree"]
 	path = .vim/pack/plugins/opt/undotree
 	url = https://github.com/mbbill/undotree.git
@@ -106,9 +103,6 @@
 [submodule ".vim/pack/plugins/opt/i3-vim-syntax"]
 	path = .vim/pack/plugins/opt/i3-vim-syntax
 	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
-[submodule ".vim/pack/plugins/opt/vim-hardtime"]
-	path = .vim/pack/plugins/opt/vim-hardtime
-	url = https://github.com/takac/vim-hardtime.git
 [submodule ".vim/pack/plugins/opt/vim-sourcetrail"]
 	path = .vim/pack/plugins/opt/vim-sourcetrail
 	url = https://github.com/CoatiSoftware/vim-sourcetrail.git
@@ -133,9 +127,6 @@
 [submodule ".vim/pack/plugins/opt/goyo.vim"]
 	path = .vim/pack/plugins/opt/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
-[submodule ".vim/pack/plugins/opt/suckless.vim"]
-	path = .vim/pack/plugins/opt/suckless.vim
-	url = https://github.com/fabi1cazenave/suckless.vim.git
 [submodule ".vim/pack/plugins/opt/rust.vim"]
 	path = .vim/pack/plugins/opt/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
