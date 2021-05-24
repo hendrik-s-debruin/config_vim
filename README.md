@@ -1,1 +1,0 @@
-.config/cfgmgr/README/README.vim.md
