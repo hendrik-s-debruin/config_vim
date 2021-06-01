@@ -10,6 +10,19 @@ function s:SetupCPP()
 	hi link doxygenBriefL               GruvboxFg3
 	hi link doxygenSpecialMultilineDesc GruvboxFg0
 	hi link doxygenStartL               GruvboxBg4
+	" Modified from question
+	" https://stackoverflow.com/questions/1280514/how-to-fold-c-style-comments-in-vim
+	" answer https://stackoverflow.com/a/1284562
+	"
+	" TODO it's not clear if all of these are required, or just ome
+	syn match comment                     "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenParam                "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenSpecial              "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenSmallSpecial         "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenParamName            "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenBriefL               "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenSpecialMultilineDesc "\v(^\s*///.*\n)+" transparent fold
+	syn match doxygenStartL               "\v(^\s*///.*\n)+" transparent fold
 endfunction
 autocmd BufRead,BufNewFile *.tpp,*.hpp,*.cpp call s:SetupCPP()
 

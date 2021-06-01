@@ -5,13 +5,6 @@ hi def link cmakedefine Macro
 syn region cmakedefine start="^\s*#cmakedefine" end="$"
 
 " ==============================================================================
-" Fold Doxygen Comments
-" ==============================================================================
-" Modified from question https://stackoverflow.com/questions/1280514/how-to-fold-c-style-comments-in-vim
-" answer https://stackoverflow.com/a/1284562
-syn match comment "\v(^\s*///.*\n)+" fold
-
-" ==============================================================================
 " Highlight Catch2 Macros as Keywords
 " ==============================================================================
 hi def link catch_keyword Keyword
