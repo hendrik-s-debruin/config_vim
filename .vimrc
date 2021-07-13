@@ -57,6 +57,7 @@ endif
 " ~/.vim/after/syntax/markdown.vim
 
 " =========================== Settings for Filetypes ===========================
+" ~/.vim/after/ftplugin/matlab.vim
 " ~/.vim/after/ftplugin/c.vim
 " ~/.vim/after/ftplugin/fugitiveblame.vim
 " ~/.vim/after/ftplugin/gitcommit.vim
