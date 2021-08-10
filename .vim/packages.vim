@@ -76,6 +76,8 @@ source ~/.vim/pack/plugins/settings_sourcetrail.vim
 packadd vim-sourcetrail
 
 packadd rust.vim
+
+packadd cmake4vim
 " ==============================================================================
 " Behaviours
 " ==============================================================================

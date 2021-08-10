@@ -139,3 +139,6 @@
 [submodule ".vim/pack/plugins/opt/calendar-vim"]
 	path = .vim/pack/plugins/opt/calendar-vim
 	url = https://github.com/mattn/calendar-vim.git
+[submodule ".vim/pack/plugins/opt/cmake4vim"]
+	path = .vim/pack/plugins/opt/cmake4vim
+	url = https://github.com/ilyachur/cmake4vim
