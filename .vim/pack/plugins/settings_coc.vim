@@ -20,6 +20,7 @@ let g:coc_global_extensions = ['coc-json',
 	\ 'coc-svg',
 	\ 'coc-yaml',
 	\ 'coc-glslx',
+	\ 'coc-java',
 	\ 'coc-xml' ]
 
 " ==============================================================================

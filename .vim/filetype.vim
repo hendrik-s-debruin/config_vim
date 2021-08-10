@@ -15,14 +15,14 @@ function s:SetupCPP()
 	" answer https://stackoverflow.com/a/1284562
 	"
 	" TODO it's not clear if all of these are required, or just ome
-	syn match comment                     "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenParam                "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenSpecial              "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenSmallSpecial         "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenParamName            "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenBriefL               "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenSpecialMultilineDesc "\v(^\s*///.*\n)+" transparent fold
-	syn match doxygenStartL               "\v(^\s*///.*\n)+" transparent fold
+	" syn match comment                     "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenParam                "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenSpecial              "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenSmallSpecial         "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenParamName            "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenBriefL               "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenSpecialMultilineDesc "\v(^\s*///.*\n)+" transparent fold
+	" syn match doxygenStartL               "\v(^\s*///.*\n)+" transparent fold
 endfunction
 autocmd BufRead,BufNewFile *.tpp,*.hpp,*.cpp call s:SetupCPP()
 

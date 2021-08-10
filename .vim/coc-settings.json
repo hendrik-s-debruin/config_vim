@@ -11,5 +11,10 @@
 			}
 		}
 	},
-	"clangd.semanticHighlighting": true
+  "clangd.semanticHighlighting": true,
+  "cSpell.userWords": [
+    "eigen",
+    "nolint",
+    "quaternion"
+  ]
 }

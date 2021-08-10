@@ -49,7 +49,7 @@ packadd emmet-vim
 " ==============================================================================
 " Integrations
 " ==============================================================================
-packadd editorconfig-vim
+" packadd editorconfig-vim
 
 source ~/.vim/pack/plugins/settings_flog.vim
 packadd vim-flog
