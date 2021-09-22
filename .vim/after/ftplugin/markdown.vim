@@ -1,12 +1,12 @@
 " General settings
 
-set spell
-map k gk
-map j gj
+setlocal spell
+map <buffer> k gk
+map <buffer> j gj
 
-set formatoptions=""
-set formatoptions+=n " format numbered lists
-set formatoptions+=t " break lines at text width
+setlocal formatoptions=""
+setlocal formatoptions+=n " format numbered lists
+setlocal formatoptions+=t " break lines at text width
 
 " Functions
 function! MarkdownCodeBlock()
@@ -32,7 +32,7 @@ function! MarkdownSectionMajor(underline_char)
 endfunction
 
 function! MarkdownSectionMinor(level)
-	let l:max_cols = &textwidth 
+	let l:max_cols = &textwidth
 	let l:line = getline('.')
 
 	let l:append_num = l:max_cols - a:level - strchars(l:line) - 2
@@ -45,10 +45,10 @@ function! MarkdownSectionMinor(level)
 endfunction!
 
 " Bindings
-noremap <leader>c  :call MarkdownCodeBlock()<Enter>
-noremap <leader>s1 :call MarkdownSectionMajor('=')<Enter>
-noremap <leader>s2 :call MarkdownSectionMajor('-')<Enter>
-noremap <leader>s3 :call MarkdownSectionMinor(3)<Enter>
-noremap <leader>s4 :call MarkdownSectionMinor(4)<Enter>
-noremap <leader>s5 :call MarkdownSectionMinor(5)<Enter>
-noremap <leader>s6 :call MarkdownSectionMinor(6)<Enter>
+noremap <buffer> <leader>c  :call MarkdownCodeBlock()<Enter>
+noremap <buffer> <leader>s1 :call MarkdownSectionMajor('=')<Enter>
+noremap <buffer> <leader>s2 :call MarkdownSectionMajor('-')<Enter>
+noremap <buffer> <leader>s3 :call MarkdownSectionMinor(3)<Enter>
+noremap <buffer> <leader>s4 :call MarkdownSectionMinor(4)<Enter>
+noremap <buffer> <leader>s5 :call MarkdownSectionMinor(5)<Enter>
+noremap <buffer> <leader>s6 :call MarkdownSectionMinor(6)<Enter>

@@ -2,10 +2,10 @@
 " Settings
 " ==============================================================================
 " Do not use the default comment of /* <comment> */
-set commentstring=//%s
+setlocal commentstring=//%s
 
 " Continue doxygen comments
-set comments^=:///
+setlocal comments^=:///
 
 " ==============================================================================
 " Functions
@@ -35,5 +35,5 @@ endfunction
 " ==============================================================================
 " Bindings
 " ==============================================================================
-noremap <leader>i :call IncludeCHeader()<Enter>
-noremap <leader>I :call IncludeCSystemHeader()<Enter>
+noremap <buffer> <leader>i :call IncludeCHeader()<Enter>
+noremap <buffer> <leader>I :call IncludeCSystemHeader()<Enter>
