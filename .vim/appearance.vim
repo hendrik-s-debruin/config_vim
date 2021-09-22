@@ -28,6 +28,6 @@ augroup END
 
 augroup highlightcursorline
 	autocmd!
-	autocmd VimEnter,WinEnter * set cursorline
-	autocmd WinLeave * set nocursorline
+	autocmd VimEnter,WinEnter * set cursorline   cursorcolumn
+	autocmd WinLeave          * set nocursorline nocursorcolumn
 augroup END
