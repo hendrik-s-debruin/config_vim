@@ -1,8 +1,8 @@
 function! s:isPasswordFile()
 	let filename = expand('%')
 	let test1 = (match(filename, '/dev/shm/pass.*txt') == 0)
-	let test2 = (match(filename, '$TMPDIR/pass.*txt') == 0)
-	let test3 = (match(filename, '/tmp/pass.*txt') == 0)
+	let test2 = (match(filename, '$TMPDIR/pass.*txt')  == 0)
+	let test3 = (match(filename, '/tmp/pass.*txt')     == 0)
 	if test1 || test2 || test3
 		return 1
 	else
@@ -64,3 +64,4 @@ endif
 " ~/.vim/after/ftplugin/markdown.vim
 " ~/.vim/after/ftplugin/python.vim
 " ~/.vim/after/ftplugin/tex.vim
+" ~/.vim/after/ftplugin/i3.vim
