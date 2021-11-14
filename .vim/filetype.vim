@@ -62,3 +62,6 @@ autocmd BufRead,BufNewFile *wat,*wast set indentexpr=""
 
 " Wiki
 autocmd BufRead,BufNewFile *.wiki set filetype=vimwiki
+
+" rofi
+autocmd BufRead,BufNewFile *.rasi set filetype=css

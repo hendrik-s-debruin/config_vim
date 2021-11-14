@@ -6,6 +6,27 @@
 command! Rebash source ~/.vimrc
 
 " ==============================================================================
+" Hide/Show Line Numbers
+" ==============================================================================
+function! Nu()
+	windo set number relativenumber
+	augroup numbertoggle
+		autocmd!
+		autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+		autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+	augroup END
+endfunction
+command! Nu call Nu()
+
+function Nonu()
+	windo set nonumber norelativenumber
+	augroup numbertoggle
+endfunction
+command! Nonu call Nonu()
+
+call Nu()
+
+" ==============================================================================
 " Close all other windows
 " ==============================================================================
 command! Only only | tabonly

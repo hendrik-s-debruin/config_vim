@@ -19,13 +19,6 @@ set colorcolumn=+1
 set conceallevel=0
 set list lcs=tab:│\ 
 
-set number relativenumber
-augroup numbertoggle
-	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
-augroup END
-
 augroup highlightcursorline
 	autocmd!
 	autocmd VimEnter,WinEnter * set cursorline   cursorcolumn
