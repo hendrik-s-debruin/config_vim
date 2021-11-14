@@ -75,6 +75,7 @@ packadd vim-fugitive
 source ~/.vim/pack/plugins/settings_sourcetrail.vim
 packadd vim-sourcetrail
 
+source ~/.vim/pack/plugins/settings_rust.vim
 packadd rust.vim
 
 source ~/.vim/pack/plugins/settings_cmake4vim.vim
