@@ -130,6 +130,9 @@ packadd vim-airline
 
 packadd vim-CtrlXA
 
+source ~/.vim/pack/plugins/settings_indentLine.vim
+packadd indentLine
+
 " ==============================================================================
 " Theme
 " ==============================================================================

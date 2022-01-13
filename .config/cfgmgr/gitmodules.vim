@@ -142,3 +142,6 @@
 [submodule ".vim/pack/plugins/opt/cmake4vim"]
 	path = .vim/pack/plugins/opt/cmake4vim
 	url = https://github.com/ilyachur/cmake4vim
+[submodule ".vim/pack/plugins/opt/indentLine"]
+	path = .vim/pack/plugins/opt/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
