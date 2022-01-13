@@ -4,7 +4,7 @@
 let g:coc_global_extensions = ['coc-json',
 	\ 'coc-git',
 	\ 'coc-clangd',
-	\ 'coc-python',
+	\ 'coc-pyright',
 	\ 'coc-rls',
 	\ 'coc-rust-analyzer',
 	\ 'coc-clang-format-style-options',
@@ -79,3 +79,8 @@ function! TriggerCocWarnings()
 	endif
 endfunction
 nmap <leader>cw :call TriggerCocWarnings()<CR>
+
+" ==============================================================================
+" Python Settings
+" ==============================================================================
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
