@@ -18,3 +18,7 @@ set nofoldenable
 
 set tabstop=4
 set shiftwidth=4
+
+" Command line completion
+set wildmenu
+set wildmode=full
