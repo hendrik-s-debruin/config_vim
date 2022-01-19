@@ -65,3 +65,6 @@ autocmd BufRead,BufNewFile *.wiki set filetype=vimwiki
 
 " rofi
 autocmd BufRead,BufNewFile *.rasi set filetype=css
+
+" Python
+autocmd BufRead,BufNewFile *.py set foldmethod=marker

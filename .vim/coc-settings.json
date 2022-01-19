@@ -16,6 +16,10 @@
     "eigen",
     "nolint",
     "quaternion",
-    "raytracer"
+    "raytracer",
+	"repr",
+	"rustfmt",
+	"orobix",
+	"aigo"
   ]
 }
