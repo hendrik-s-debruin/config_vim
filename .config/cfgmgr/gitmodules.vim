@@ -148,3 +148,6 @@
 [submodule ".vim/pack/plugins/opt/vimspector"]
 	path = .vim/pack/plugins/opt/vimspector
 	url = https://github.com/puremourning/vimspector.git
+[submodule ".vim/pack/plugins/opt/wgsl.vim"]
+	path = .vim/pack/plugins/opt/wgsl.vim
+	url = https://github.com/DingDean/wgsl.vim.git

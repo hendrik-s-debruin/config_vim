@@ -26,6 +26,9 @@ function s:SetupCPP()
 endfunction
 autocmd BufRead,BufNewFile *.tpp,*.hpp,*.cpp call s:SetupCPP()
 
+" Rust
+autocmd BufRead,BufNewFile *.rs :silent! call matchadd('Todo', 'todo!', -1)
+
 " GLSL
 autocmd BufRead,BufNewFile *.vs   set filetype=glsl
 autocmd BufRead,BufNewFile *.fs   set filetype=glsl

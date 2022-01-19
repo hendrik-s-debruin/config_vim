@@ -136,6 +136,7 @@ endsnippet
 snippet test "unit tests" b
 #[cfg(test)]
 mod tests {
+	use super::*;
 	#[test]
 	${1:fn it_works() {
 		assert_eq!(2 + 2, 4);
@@ -152,4 +153,69 @@ snippet shutup "silence some warnings in vim" b
 #![allow(dead_code)]
 #![allow(unused_imports)]
 #![allow(unused_variables)]
+endsnippet
+
+# ==============================================================================
+# Macros
+# ==============================================================================
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+endglobal
+
+global !p
+def completeMacroType(t):
+	opts = [
+		"expr",
+		"ident",
+		"item",
+		"lifetime",
+		"literal",
+		"meta",
+		"pat",
+		"path",
+		"stmt",
+		"tt",
+		"ty",
+		"block",
+		"vis"
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeMacroRep(t):
+	opts = [
+		"?",
+		"*",
+		"+",
+		" "
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeMacroSep(t):
+	opts = [
+		",",
+		";",
+		" ",
+		# "?",
+		# "*",
+		# "+",
+	]
+	return complete(t, opts)
+endglobal
+
+snippet macro "macro rules macro" b
+macro_rules! ${1:macro_name} {
+	( $($${2:var_name}:$3`!p snip.rv = completeMacroType(t[3])`))$5`!p snip.rv = completeMacroSep(t[5])`$6`!p snip.rv = completeMacroRep(t[6])` => {
+		${7: // Implementation}
+	},
+	$0
+}
 endsnippet

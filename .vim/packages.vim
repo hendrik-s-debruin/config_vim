@@ -14,6 +14,7 @@ packadd vim-toml
 packadd vim-glsl
 packadd vim-log-highlighting
 packadd vim-markdown
+packadd wgsl.vim
 
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque

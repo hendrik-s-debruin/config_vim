@@ -64,6 +64,7 @@ endif
 " ~/.vim/after/ftplugin/markdown.vim
 " ~/.vim/after/ftplugin/python.vim
 " ~/.vim/after/ftplugin/tex.vim
+" ~/.vim/after/ftplugin/rust.vim
 " ~/.vim/after/ftplugin/i3.vim
 " ~/.vim/after/ftplugin/bash.vim
 " ~/.vim/after/ftplugin/zsh.vim

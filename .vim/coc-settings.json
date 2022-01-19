@@ -20,6 +20,19 @@
 	"repr",
 	"rustfmt",
 	"orobix",
-	"aigo"
+	"aigo",
+    "raytracer",
+	"bitmask",
+	"winit",
+	"backend",
+	"backends",
+	"wgsl",
+	"repr",
+	"zeroable",
+	"rustfmt",
+	"opengl",
+	"clippy",
+	"typedef",
+	"typedefs"
   ]
 }
