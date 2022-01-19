@@ -145,3 +145,6 @@
 [submodule ".vim/pack/plugins/opt/indentLine"]
 	path = .vim/pack/plugins/opt/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule ".vim/pack/plugins/opt/vimspector"]
+	path = .vim/pack/plugins/opt/vimspector
+	url = https://github.com/puremourning/vimspector.git

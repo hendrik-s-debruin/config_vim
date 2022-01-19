@@ -133,6 +133,9 @@ packadd vim-CtrlXA
 source ~/.vim/pack/plugins/settings_indentLine.vim
 packadd indentLine
 
+source ~/.vim/pack/plugins/settings_vimspector.vim
+packadd vimspector
+
 " ==============================================================================
 " Theme
 " ==============================================================================
