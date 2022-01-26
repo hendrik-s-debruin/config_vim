@@ -2,4 +2,4 @@ let NERDTreeMinimalUI=1
 noremap <leader>nt :NERDTreeToggle<Enter>
 noremap <leader>ntf :NERDTreeFind<Enter>
 
-let NERDTreeIgnore = ['build*', 'cmake-build*', '\.git', '\.cache', '\.tags', 'target']
+let NERDTreeIgnore = ['build*', 'cmake-build*', '\.git', '\.cache', '\.tags', 'target', '.*egg-info$', '__pycache__']

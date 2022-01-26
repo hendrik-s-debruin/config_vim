@@ -51,11 +51,6 @@ packadd emmet-vim
 " Integrations
 " ==============================================================================
 " packadd editorconfig-vim
-
-source ~/.vim/pack/plugins/settings_flog.vim
-packadd vim-flog
-
-
 source ~/.vim/pack/plugins/settings_ack.vim
 packadd ack.vim
 
@@ -72,6 +67,9 @@ packadd vim-gutentags
 
 source ~/.vim/pack/plugins/settings_fugitive.vim
 packadd vim-fugitive
+
+source ~/.vim/pack/plugins/settings_flog.vim
+packadd vim-flog
 
 source ~/.vim/pack/plugins/settings_sourcetrail.vim
 packadd vim-sourcetrail
