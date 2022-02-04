@@ -79,6 +79,8 @@ packadd rust.vim
 
 source ~/.vim/pack/plugins/settings_cmake4vim.vim
 packadd cmake4vim
+
+packadd vim-virtualenv
 " ==============================================================================
 " Behaviours
 " ==============================================================================

@@ -151,3 +151,6 @@
 [submodule ".vim/pack/plugins/opt/wgsl.vim"]
 	path = .vim/pack/plugins/opt/wgsl.vim
 	url = https://github.com/DingDean/wgsl.vim.git
+[submodule ".vim/pack/plugins/opt/vim-virtualenv"]
+	path = .vim/pack/plugins/opt/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git

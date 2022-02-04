@@ -12,6 +12,7 @@ set formatoptions=""
 set formatoptions+=c " autowrap comments at text width
 set formatoptions+=q " alow formatting of comments with gq
 set formatoptions+=j " remove leader when joining with j
+set formatoptions+=r " auto continue comments on next line
 
 set foldmethod=syntax
 set nofoldenable
