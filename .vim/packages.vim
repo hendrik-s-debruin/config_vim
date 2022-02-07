@@ -68,6 +68,8 @@ packadd vim-gutentags
 source ~/.vim/pack/plugins/settings_fugitive.vim
 packadd vim-fugitive
 
+packadd vim-fubitive
+
 source ~/.vim/pack/plugins/settings_flog.vim
 packadd vim-flog
 
@@ -136,6 +138,9 @@ packadd indentLine
 
 source ~/.vim/pack/plugins/settings_vimspector.vim
 packadd vimspector
+
+packadd wilder.nvim
+call wilder#setup({'modes': [':', '/', '?']})
 
 " ==============================================================================
 " Theme

@@ -21,5 +21,5 @@ set tabstop=4
 set shiftwidth=4
 
 " Command line completion
-set wildmenu
-set wildmode=full
+set nowildmenu
+set wildmode=list:full

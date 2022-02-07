@@ -1,5 +1,4 @@
-{
-	"languageserver": {
+{ "languageserver": {
 		"cmake": {
 			"command": "cmake-language-server",
 			"filetypes": ["cmake"],
@@ -9,7 +8,7 @@
 			"initializationOptions": {
 				"buildDirectory": "build"
 			}
-		}
+		},
 	},
   "clangd.semanticHighlighting": true,
   "cSpell.userWords": [
@@ -33,6 +32,23 @@
 	"opengl",
 	"clippy",
 	"typedef",
-	"typedefs"
-  ]
+	"typedefs",
+	"PKCS",
+	"OAEP",
+	"decryptor",
+	"encryptor",
+	"unpad",
+	"PBKDF",
+	"yapf",
+  ],
+  "python.formatting.provider": "yapf",
+  "python.analysis.typeCheckingMode": "strict",
+  "python.linting.flake8Enabled": false,
+  "python.linting.banditEnabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.linting.pytypeEnabled": false,
+  "python.linting.pydocstyleEnabled": false,
+  "python.linting.prospectorEnabled": false,
+  "python.linting.pylamaEnabled": false,
+  "python.linting.pylintEnabled": false
 }

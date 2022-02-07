@@ -154,3 +154,9 @@
 [submodule ".vim/pack/plugins/opt/vim-virtualenv"]
 	path = .vim/pack/plugins/opt/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule ".vim/pack/plugins/opt/vim-fubitive"]
+	path = .vim/pack/plugins/opt/vim-fubitive
+	url = https://github.com/tommcdo/vim-fubitive.git
+[submodule ".vim/pack/plugins/opt/wilder.nvim"]
+	path = .vim/pack/plugins/opt/wilder.nvim
+	url = https://github.com/gelguy/wilder.nvim.git
