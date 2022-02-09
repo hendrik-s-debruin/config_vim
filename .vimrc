@@ -30,6 +30,7 @@ else
 	source ~/.vim/packages.vim
 
 	highlight SpellBad guifg=#cc241d cterm=underline,italic
+	hi Normal ctermbg=NONE guibg=NONE
 endif
 
 " ==============================================================================
