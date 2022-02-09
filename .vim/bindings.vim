@@ -15,6 +15,7 @@ noremap  <leader>dgk :diffget BASE<Enter>
 noremap  <leader>dgl :diffget REMOTE<Enter>
 noremap  <leader>cn  :cnext<CR>
 noremap  <leader>cp  :cprev<CR>
+noremap  <leader>te  :tabe %<Enter>
 
 " Locally defined functions
 noremap <leader>r  :RangerChooser<Enter>
