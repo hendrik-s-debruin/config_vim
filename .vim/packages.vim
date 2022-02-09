@@ -16,6 +16,9 @@ packadd vim-log-highlighting
 packadd vim-markdown
 packadd wgsl.vim
 
+source ~/.vim/pack/plugins/settings_devicons.vim
+packadd vim-devicons
+
 " ======================== Highlight Html Colour Codes =========================
 packadd vim-coloresque
 

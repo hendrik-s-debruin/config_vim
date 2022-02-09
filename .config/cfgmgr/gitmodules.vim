@@ -160,3 +160,6 @@
 [submodule ".vim/pack/plugins/opt/wilder.nvim"]
 	path = .vim/pack/plugins/opt/wilder.nvim
 	url = https://github.com/gelguy/wilder.nvim.git
+[submodule ".vim/pack/plugins/opt/vim-devicons"]
+	path = .vim/pack/plugins/opt/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
