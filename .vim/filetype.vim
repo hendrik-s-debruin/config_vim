@@ -71,3 +71,6 @@ autocmd BufRead,BufNewFile *.rasi set filetype=css
 
 " Python
 autocmd BufRead,BufNewFile *.py set foldmethod=marker
+
+" Git commit
+autocmd FileType gitcommit set foldmethod=syntax
