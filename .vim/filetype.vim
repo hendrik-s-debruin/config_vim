@@ -74,3 +74,4 @@ autocmd BufRead,BufNewFile *.py set foldmethod=marker
 
 " Git commit
 autocmd FileType gitcommit set foldmethod=syntax
+autocmd FileType git set foldmethod=syntax
