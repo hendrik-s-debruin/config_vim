@@ -248,3 +248,66 @@ function! SynGroup()
 	let l:s = synID(line('.'), col('.'), 1)
 	echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfun
+
+" ==============================================================================
+" Open bookmark
+" ==============================================================================
+let s:ranger_bookmarks_file = $HOME . "/.config/ranger/bookmarks"
+let s:zsh_bookmarks_file = $HOME . "/.config/zsh/bookmarks"
+function OpenShellBookmark(bookmark)
+
+	let s:bookmark_dictionary = {}
+
+	let s:ranger_bookmarks = readfile(s:ranger_bookmarks_file)
+	for bookmark in s:ranger_bookmarks
+		let s:parts = split(bookmark, ":")
+		let s:name = s:parts[0]
+		let s:location = join(s:parts[1:], ":")
+		let s:bookmark_dictionary[s:name] = s:location
+		" echo "ranger bookmark: " . s:name . " location: " . s:location
+	endfor
+
+	let s:zsh_bookmarks = readfile(s:zsh_bookmarks_file)
+	for bookmark in s:zsh_bookmarks
+		" TODO don't copy-paste this from above
+		let s:parts = split(bookmark, ":")
+		let s:name = s:parts[0]
+		let s:location = join(s:parts[1:], ":")
+		let s:bookmark_dictionary[s:name] = s:location
+	endfor
+
+	if has_key(s:bookmark_dictionary, a:bookmark)
+		let s:filename = s:bookmark_dictionary[a:bookmark]
+		execute "e " . fnameescape(s:filename)
+	else
+		echo "unknown bookmark " . a:bookmark
+	endif
+endfunction
+
+function s:ListShellBookmarks(ArgLead, CmdLine, CursorPos)
+	let s:ranger_bookmarks = readfile(s:ranger_bookmarks_file)
+	let s:zsh_bookmarks = readfile(s:zsh_bookmarks_file)
+
+	let s:bookmarks = []
+
+	echo "arglead: " . a:ArgLead
+
+	for bookmark in s:ranger_bookmarks
+		let s:bookmark_name = split(bookmark, ":")[0]
+		if stridx(s:bookmark_name, a:ArgLead) == 0
+			let s:bookmarks += [s:bookmark_name]
+		endif
+	endfor
+
+	" TODO do not copy-paste this like above
+	for bookmark in s:zsh_bookmarks
+		let s:bookmark_name = split(bookmark, ":")[0]
+		if stridx(s:bookmark_name, a:ArgLead) == 0
+			let s:bookmarks += [s:bookmark_name]
+		endif
+	endfor
+
+	return s:bookmarks
+endfunction
+
+command! -nargs=1 -complete=customlist,s:ListShellBookmarks C call OpenShellBookmark("<args>")
