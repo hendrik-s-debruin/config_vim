@@ -73,6 +73,8 @@ packadd vim-fugitive
 
 packadd vim-fubitive
 
+packadd vim-rhubarb
+
 source ~/.vim/pack/plugins/settings_flog.vim
 packadd vim-flog
 

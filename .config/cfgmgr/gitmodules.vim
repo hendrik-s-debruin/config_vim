@@ -163,3 +163,6 @@
 [submodule ".vim/pack/plugins/opt/vim-devicons"]
 	path = .vim/pack/plugins/opt/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule ".vim/pack/plugins/opt/vim-rhubarb"]
+	path = .vim/pack/plugins/opt/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
