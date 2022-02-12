@@ -57,8 +57,6 @@ packadd emmet-vim
 source ~/.vim/pack/plugins/settings_ack.vim
 packadd ack.vim
 
-packadd fcitx.vim
-
 source ~/.vim/pack/plugins/settings_fzf.vim
 packadd fzf
 

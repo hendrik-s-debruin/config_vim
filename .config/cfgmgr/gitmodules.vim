@@ -10,9 +10,6 @@
 [submodule ".vim/pack/plugins/opt/emmet-vim"]
 	path = .vim/pack/plugins/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
-[submodule ".vim/pack/plugins/opt/fcitx.vim"]
-	path = .vim/pack/plugins/opt/fcitx.vim
-	url = https://github.com/vim-scripts/fcitx.vim.git
 [submodule ".vim/pack/plugins/opt/gruvbox"]
 	path = .vim/pack/plugins/opt/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
