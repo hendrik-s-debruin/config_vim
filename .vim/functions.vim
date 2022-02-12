@@ -307,7 +307,7 @@ function s:ListShellBookmarks(ArgLead, CmdLine, CursorPos)
 		endif
 	endfor
 
-	return s:bookmarks
+	return sort(s:bookmarks)
 endfunction
 
 command! -nargs=1 -complete=customlist,s:ListShellBookmarks C call OpenShellBookmark("<args>")
