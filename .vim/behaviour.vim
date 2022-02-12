@@ -26,7 +26,11 @@ set wildmode=list:full
 
 " Automatically activate a python virtual environment when editing the file if
 " that environment is not yet active
+let g:auto_venv_enable = 1
 function s:AutoVenv()
+	if !g:auto_venv_enable
+		return
+	endif
 	" Get directory name of current file
 	let s:dirname = expand("%:h")
 
@@ -37,8 +41,14 @@ function s:AutoVenv()
 	" Set the virtual environment if this is a git repo with a virtual
 	" environment specified at the expected location
 	if s:is_git_project
+
+		" Where we expect to find the virtual environment marker file
 		let s:venv_location = s:gitdir . "/.venv"
+
+		" Check if the marker file exists
 		if filereadable(s:venv_location)
+
+			" Get the name of the virtual environment from the marker file
 			let s:venv_name = substitute(readfile(s:venv_location)[0], ' ', '', '')
 
 			" $VIRTUAL_ENV contains the full path to the virtual environment,
@@ -47,7 +57,7 @@ function s:AutoVenv()
 			let s:current_venv = fnamemodify($VIRTUAL_ENV, ":t")
 
 			if s:venv_name != s:current_venv
-				echomsg "setting python virtual environment to '" s:venv_name "'"
+				echomsg "setting python virtual environment to '" . s:venv_name . "'"
 				call virtualenv#activate(s:venv_name)
 				silent call coc#rpc#restart()
 			endif
@@ -55,4 +65,4 @@ function s:AutoVenv()
 	endif
 endfunction
 
-autocmd BufReadPost * call s:AutoVenv()
+autocmd BufRead,BufEnter *.py call s:AutoVenv()
