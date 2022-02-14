@@ -264,7 +264,6 @@ function OpenShellBookmark(bookmark)
 		let s:name = s:parts[0]
 		let s:location = join(s:parts[1:], ":")
 		let s:bookmark_dictionary[s:name] = s:location
-		" echo "ranger bookmark: " . s:name . " location: " . s:location
 	endfor
 
 	let s:zsh_bookmarks = readfile(s:zsh_bookmarks_file)
@@ -278,7 +277,9 @@ function OpenShellBookmark(bookmark)
 
 	if has_key(s:bookmark_dictionary, a:bookmark)
 		let s:filename = s:bookmark_dictionary[a:bookmark]
+		let s:dirname = fnamemodify(s:filename, ":p")
 		execute "e " . fnameescape(s:filename)
+		execute("cd " . s:dirname)
 	else
 		echo "unknown bookmark " . a:bookmark
 	endif
