@@ -15,6 +15,7 @@ packadd vim-glsl
 packadd vim-log-highlighting
 packadd vim-markdown
 packadd wgsl.vim
+packadd requirements.txt.vim
 
 source ~/.vim/pack/plugins/settings_devicons.vim
 packadd vim-devicons

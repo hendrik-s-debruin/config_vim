@@ -163,3 +163,6 @@
 [submodule ".vim/pack/plugins/opt/vim-rhubarb"]
 	path = .vim/pack/plugins/opt/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule ".vim/pack/plugins/opt/requirements.txt.vim"]
+	path = .vim/pack/plugins/opt/requirements.txt.vim
+	url = https://github.com/raimon49/requirements.txt.vim.git
