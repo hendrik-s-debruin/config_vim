@@ -7,6 +7,7 @@ set mouse=a
 set incsearch
 set spelllang=en_gb
 set textwidth=80
+set nowrapscan
 
 set formatoptions=""
 set formatoptions+=c " autowrap comments at text width
