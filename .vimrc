@@ -28,9 +28,7 @@ else
 	source ~/.vim/functions.vim
 	source ~/.vim/bindings.vim
 	source ~/.vim/packages.vim
-
-	highlight SpellBad guifg=#cc241d cterm=underline,italic
-	hi Normal ctermbg=NONE guibg=NONE
+	source ~/.vim/appearance_after.vim
 endif
 
 " ==============================================================================
