@@ -1,8 +1,8 @@
 " This file associates file extensions with their respective languages
 " CPP
 function s:SetupCPP()
-	set filetype=cpp
-	set syntax=cpp.doxygen
+	setlocal filetype=cpp
+	setlocal syntax=cpp.doxygen
 	hi link doxygenParam                GruvboxAqua
 	hi link doxygenSpecial              GruvboxAqua
 	hi link doxygenSmallSpecial         GruvboxAqua
@@ -30,48 +30,48 @@ autocmd BufRead,BufNewFile *.tpp,*.hpp,*.cpp call s:SetupCPP()
 autocmd BufRead,BufNewFile *.rs :silent! call matchadd('Todo', 'todo!', -1)
 
 " GLSL
-autocmd BufRead,BufNewFile *.vs   set filetype=glsl
-autocmd BufRead,BufNewFile *.fs   set filetype=glsl
-autocmd BufRead,BufNewFile *.vert set filetype=glsl
-autocmd BufRead,BufNewFile *.tesc set filetype=glsl
-autocmd BufRead,BufNewFile *.tese set filetype=glsl
-autocmd BufRead,BufNewFile *.geom set filetype=glsl
-autocmd BufRead,BufNewFile *.frag set filetype=glsl
-autocmd BufRead,BufNewFile *.comp set filetype=glsl
+autocmd BufRead,BufNewFile *.vs   setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.fs   setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.vert setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.tesc setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.tese setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.geom setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.frag setlocal filetype=glsl
+autocmd BufRead,BufNewFile *.comp setlocal filetype=glsl
 
 " ROS launch files
-autocmd BufRead,BufNewFile *.launch set filetype=xml
+autocmd BufRead,BufNewFile *.launch setlocal filetype=xml
 
 " Clang tools
-autocmd BufRead,BufNewFile .clang-format set filetype=yaml
-autocmd BufRead,BufNewFile .clang-tidy   set filetype=yaml
+autocmd BufRead,BufNewFile .clang-format setlocal filetype=yaml
+autocmd BufRead,BufNewFile .clang-tidy   setlocal filetype=yaml
 
 " GDB
-autocmd BufRead,BufNewFile *.gdb set filetype=gdb
+autocmd BufRead,BufNewFile *.gdb setlocal filetype=gdb
 
 " Gazebo
-autocmd BufRead,BufNewFile *.world      set filetype=xml
-autocmd BufRead,BufNewFile *.sdf        set filetype=xml
-autocmd BufRead,BufNewFile model.config set filetype=xml
+autocmd BufRead,BufNewFile *.world      setlocal filetype=xml
+autocmd BufRead,BufNewFile *.sdf        setlocal filetype=xml
+autocmd BufRead,BufNewFile model.config setlocal filetype=xml
 
 " Conan (this is defining a new type not known to vim)
-autocmd BufRead,BufNewFile conanfile.txt set filetype=conan
+autocmd BufRead,BufNewFile conanfile.txt setlocal filetype=conan
 
 " default version of tex when opening a .tex file
 let g:tex_flavor="latex"
 
 " Wasm: do not use lisp indentation rules
-autocmd BufRead,BufNewFile *wat,*wast set indentexpr=""
+autocmd BufRead,BufNewFile *wat,*wast setlocal indentexpr=""
 
 " Wiki
-autocmd BufRead,BufNewFile *.wiki set filetype=vimwiki
+autocmd BufRead,BufNewFile *.wiki setlocal filetype=vimwiki
 
 " rofi
-autocmd BufRead,BufNewFile *.rasi set filetype=css
+autocmd BufRead,BufNewFile *.rasi setlocal filetype=css
 
 " Python
-autocmd BufRead,BufNewFile *.py set foldmethod=marker
+autocmd BufRead,BufNewFile *.py setlocal foldmethod=marker
 
 " Git commit
-autocmd FileType gitcommit set foldmethod=syntax
-autocmd FileType git set foldmethod=syntax
+autocmd FileType gitcommit setlocal foldmethod=syntax
+autocmd FileType git setlocal foldmethod=syntax
