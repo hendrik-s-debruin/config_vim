@@ -166,3 +166,6 @@
 [submodule ".vim/pack/plugins/opt/requirements.txt.vim"]
 	path = .vim/pack/plugins/opt/requirements.txt.vim
 	url = https://github.com/raimon49/requirements.txt.vim.git
+[submodule ".vim/pack/plugins/opt/git-messenger.vim"]
+	path = .vim/pack/plugins/opt/git-messenger.vim
+	url = https://github.com/rhysd/git-messenger.vim.git

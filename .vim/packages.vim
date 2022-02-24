@@ -74,6 +74,8 @@ packadd vim-fubitive
 
 packadd vim-rhubarb
 
+packadd git-messenger.vim
+
 source ~/.vim/pack/plugins/settings_flog.vim
 packadd vim-flog
 
