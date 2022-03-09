@@ -88,6 +88,7 @@ $0
 endsnippet
 
 snippet struct "struct" b
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
 struct ${1:NAME} {
 	$2
 }
