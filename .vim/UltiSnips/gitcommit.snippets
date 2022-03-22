@@ -10,18 +10,19 @@ endglobal
 global !p
 def completeCommitType(t):
 	opts = [
-		"WIP",
+		"build",
+		"chore",
+		"ci",
+		"docs",
+		"feat",
 		"fix",
-		 "feat",
-		 "build",
-		 "chore",
-		 "ci",
-		 "docs",
-		 "style",
-		 "refactor",
-		 "perf",
-		 "test",
-		 "tryfix"
+		"perf",
+		"refactor",
+		"revert",
+		"style",
+		"test",
+		"tryfix",
+		"WIP",
 	]
 	return complete(t, opts)
 endglobal
