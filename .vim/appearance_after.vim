@@ -12,3 +12,5 @@ hi CocErrorHighlight cterm=underline
 
 " Coc cSpell errors
 hi CocInfoHighlight cterm=underline
+
+highlight Todo cterm=bold guibg=NONE
