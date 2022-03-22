@@ -45,6 +45,7 @@
 	"structopt",
 	"canonicalize"
   ],
+  "cSpell.language": "en-GB",
   "python.formatting.provider": "yapf",
   "python.analysis.typeCheckingMode": "strict",
   "python.linting.flake8Enabled": false,
