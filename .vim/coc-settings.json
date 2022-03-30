@@ -43,7 +43,8 @@
 	"yapf",
 	"cuda",
 	"structopt",
-	"canonicalize"
+	"canonicalize",
+	"FFI",
   ],
   "cSpell.language": "en-GB",
   "python.formatting.provider": "yapf",
