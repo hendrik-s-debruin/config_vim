@@ -20,6 +20,7 @@ if s:isPasswordFile()
 else
 	set encoding=utf-8
 	set nocompatible
+	let g:termdebug="rust-gdb"
 	packadd! termdebug
 	packadd! matchit
 	source ~/.vim/appearance.vim
