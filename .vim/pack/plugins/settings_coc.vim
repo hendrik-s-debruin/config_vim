@@ -47,6 +47,8 @@ nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
 xmap <leader>gf <Plug>(coc-format-selected)
 nmap <leader>cf <Plug>(coc-fix-current)
+nmap <leader>cr :CocRestart<Enter>
+nmap <leader>cd :CocDiagnostics<Enter>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
