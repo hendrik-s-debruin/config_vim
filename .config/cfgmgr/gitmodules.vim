@@ -172,3 +172,6 @@
 [submodule ".vim/pack/plugins/opt/targets.vim"]
 	path = .vim/pack/plugins/opt/targets.vim
 	url = https://github.com/wellle/targets.vim.git
+[submodule ".vim/pack/plugins/opt/vim-surround"]
+	path = .vim/pack/plugins/opt/vim-surround
+	url = https://github.com/tpope/vim-surround.git
