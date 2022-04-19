@@ -169,3 +169,6 @@
 [submodule ".vim/pack/plugins/opt/git-messenger.vim"]
 	path = .vim/pack/plugins/opt/git-messenger.vim
 	url = https://github.com/rhysd/git-messenger.vim.git
+[submodule ".vim/pack/plugins/opt/targets.vim"]
+	path = .vim/pack/plugins/opt/targets.vim
+	url = https://github.com/wellle/targets.vim.git
