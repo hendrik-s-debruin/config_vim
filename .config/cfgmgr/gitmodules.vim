@@ -175,3 +175,6 @@
 [submodule ".vim/pack/plugins/opt/vim-surround"]
 	path = .vim/pack/plugins/opt/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/plugins/opt/vim-kitty"]
+	path = .vim/pack/plugins/opt/vim-kitty
+	url = https://github.com/fladson/vim-kitty.git
