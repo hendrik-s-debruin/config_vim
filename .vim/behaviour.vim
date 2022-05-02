@@ -15,8 +15,7 @@ set formatoptions+=q " alow formatting of comments with gq
 set formatoptions+=j " remove leader when joining with j
 set formatoptions+=r " auto continue comments on next line
 
-set foldmethod=syntax
-set nofoldenable
+set foldmethod=marker
 
 set tabstop=4
 set shiftwidth=4
