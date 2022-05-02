@@ -50,12 +50,16 @@
   "python.formatting.provider": "yapf",
   "python.analysis.typeCheckingMode": "strict",
   "python.linting.flake8Enabled": false,
-  "python.linting.banditEnabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pytypeEnabled": true,
+  "python.linting.banditEnabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.linting.pytypeEnabled": false,
   "python.linting.pydocstyleEnabled": true,
-  "python.linting.prospectorEnabled": true,
-  "python.linting.pylamaEnabled": true,
+  "python.linting.prospectorEnabled": false,
+  "python.linting.pylamaEnabled": false,
   "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+		"--disable=W0511",
+		"--disable=W0107"
+  ],
   "go.goplsPath": "~/go/bin/gopls"
 }
