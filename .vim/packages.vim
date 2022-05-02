@@ -146,8 +146,9 @@ packadd indentLine
 source ~/.vim/pack/plugins/settings_vimspector.vim
 packadd vimspector
 
-packadd wilder.nvim
-call wilder#setup({'modes': [':', '/', '?']})
+" currently broken
+" packadd wilder.nvim
+" call wilder#setup({'modes': [':', '/', '?']})
 
 packadd targets.vim
 
