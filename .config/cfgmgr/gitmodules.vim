@@ -178,3 +178,6 @@
 [submodule ".vim/pack/plugins/opt/vim-kitty"]
 	path = .vim/pack/plugins/opt/vim-kitty
 	url = https://github.com/fladson/vim-kitty.git
+[submodule ".vim/pack/plugins/opt/vim-silicon"]
+	path = .vim/pack/plugins/opt/vim-silicon
+	url = https://github.com/segeljakt/vim-silicon.git
