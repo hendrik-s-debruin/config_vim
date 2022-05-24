@@ -10,3 +10,5 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 	\ nextgroup=markdownLink,markdownId skipwhite
 	\ contains=@markdownInline,markdownLineStart
 	\ concealends
+
+set fo+=t
