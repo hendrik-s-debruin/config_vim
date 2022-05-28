@@ -2,6 +2,7 @@
 " Extensions to auto install
 " ==============================================================================
 let g:coc_global_extensions = ['coc-json',
+	\ 'coc-tsserver',
 	\ 'coc-git',
 	\ 'coc-clangd',
 	\ 'coc-pyright',
