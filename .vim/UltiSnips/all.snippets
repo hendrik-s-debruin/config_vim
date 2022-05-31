@@ -1,7 +1,7 @@
 global !p
 import math
 textwidth     = vim.current.buffer.options["textwidth"]
-commentstring = vim.current.buffer.options["commentstring"].decode().replace("%s", "")
+commentstring = vim.current.buffer.options["commentstring"].decode().replace("%s", "").strip()
 endglobal
 
 snippet sec "add a section" b
