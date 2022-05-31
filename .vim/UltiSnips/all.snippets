@@ -1,0 +1,13 @@
+global !p
+import math
+textwidth     = vim.current.buffer.options["textwidth"]
+commentstring = vim.current.buffer.options["commentstring"].decode().replace("%s", "")
+endglobal
+
+snippet sec "add a section" b
+`!p snip.rv = commentstring` `!p snip.rv = (math.ceil((textwidth - len(t[1]) - 2)/2) - len(commentstring) - 1)*"="` ${1:SECTION} `!p snip.rv = (math.floor((textwidth - len(t[1]) - 2)/2) - 4)*"="` {{{
+
+${VISUAL}
+
+`!p snip.rv = commentstring` }}}
+endsnippet
