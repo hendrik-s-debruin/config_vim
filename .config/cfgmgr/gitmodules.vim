@@ -181,3 +181,6 @@
 [submodule ".vim/pack/plugins/opt/vim-silicon"]
 	path = .vim/pack/plugins/opt/vim-silicon
 	url = https://github.com/segeljakt/vim-silicon.git
+[submodule ".vim/pack/plugins/opt/omnisharp-vim"]
+	path = .vim/pack/plugins/opt/omnisharp-vim
+	url = https://github.com/omnisharp/omnisharp-vim
