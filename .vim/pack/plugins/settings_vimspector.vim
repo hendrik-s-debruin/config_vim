@@ -1,0 +1,12 @@
+noremap <leader>CC <Plug>VimspectorLaunch
+noremap <leader>cc <Plug>VimspectorContinue
+noremap <leader>cq <Plug>VimspectorStop
+noremap <leader>cr <Plug>VimspectorRestart
+noremap <leader>cp <Plug>VimspectorPause
+noremap <leader>cb <Plug>VimspectorToggleBreakpoint
+noremap <leader>ch <Plug>VimspectorRunToCursor
+noremap <leader>cn <Plug>VimspectorStepOver
+noremap <leader>cs <Plug>VimspectorStepInto
+noremap <leader>co <Plug>VimspectorStepOut
+noremap <leader>cu <Plug>VimspectorUpFrame
+noremap <leader>cd <Plug>VimspectorDownFrame
