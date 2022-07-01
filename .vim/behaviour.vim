@@ -66,3 +66,6 @@ function s:AutoVenv()
 endfunction
 
 autocmd BufRead,BufEnter *.py call s:AutoVenv()
+
+" Display images 
+autocmd BufRead *.png,*.jpg,*gif exec "term ++close imgcat ".expand("%")
