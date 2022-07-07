@@ -184,3 +184,6 @@
 [submodule ".vim/pack/plugins/opt/omnisharp-vim"]
 	path = .vim/pack/plugins/opt/omnisharp-vim
 	url = https://github.com/omnisharp/omnisharp-vim
+[submodule ".vim/pack/plugins/opt/vim-merginal"]
+	path = .vim/pack/plugins/opt/vim-merginal
+	url = https://github.com/idanarye/vim-merginal.git

@@ -73,6 +73,9 @@ packadd vim-gutentags
 source ~/.vim/pack/plugins/settings_fugitive.vim
 packadd vim-fugitive
 
+source ~/.vim/pack/plugins/settings_merginal.vim
+packadd vim-merginal
+
 packadd vim-fubitive
 
 packadd vim-rhubarb
