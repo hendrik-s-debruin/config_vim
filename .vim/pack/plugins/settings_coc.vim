@@ -24,6 +24,13 @@ let g:coc_global_extensions = ['coc-json',
 	\ 'coc-java',
 	\ 'coc-xml' ]
 
+autocmd FileType python let b:coc_root_patterns = ['.git', '.venv']
+
+" add auto-import to coc for python
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
 " ==============================================================================
 " General Settings
 " ==============================================================================
