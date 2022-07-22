@@ -1,0 +1,33 @@
+snippet init "Init"
+{
+	"configurations": {
+		"example": {
+			"adapter": "debugpy",
+			"configuration": {
+				"request": "launch",
+				"program": "${workspaceRoot}/lib/invariant-py/invariant-ai-agents/orobix/invariant/cli/cli.py",
+				"args": [
+					"run",
+					"--config_source_file",
+					"${workspaceRoot}/detectiv_runtime_agent/modules/detectiv_runtime/configuration_source.debug.yml"
+				],
+				"cwd": "${workspaceRoot}",
+				"stopOnEntry": true,
+				"console": "integratedTerminal"
+			}
+		},
+
+		"test-runtime": {
+			"adapter": "debugpy",
+			"configuration": {
+				"request": "launch",
+				"program": "pytest",
+				"args": ["."],
+				"cwd": "${workspaceRoot}/detectiv_runtime",
+				"stopOnEntry": true,
+				"console": "integratedTerminal"
+			}
+		}
+	}
+}
+endsnippet

@@ -51,6 +51,7 @@ endif
 " ~/.vim/UltiSnips/snippets.snippets
 " ~/.vim/UltiSnips/tex.snippets
 " ~/.vim/UltiSnips/xml.snippets
+" ~/.vim/UltiSnips/vimspector.json.snippets
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim
