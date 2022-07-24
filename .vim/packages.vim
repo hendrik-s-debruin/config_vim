@@ -163,6 +163,9 @@ packadd targets.vim
 
 packadd vim-surround
 
+source ~/.vim/pack/plugins/settings_slime.vim
+packadd vim-slime
+
 " ==============================================================================
 " Theme
 " ==============================================================================

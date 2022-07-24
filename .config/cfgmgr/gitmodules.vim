@@ -187,3 +187,6 @@
 [submodule ".vim/pack/plugins/opt/vim-merginal"]
 	path = .vim/pack/plugins/opt/vim-merginal
 	url = https://github.com/idanarye/vim-merginal.git
+[submodule ".vim/pack/plugins/opt/vim-slime"]
+	path = .vim/pack/plugins/opt/vim-slime
+	url = https://github.com/jpalardy/vim-slime.git
