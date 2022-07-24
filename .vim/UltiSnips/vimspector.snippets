@@ -1,33 +1,157 @@
+# ============================ Option Completions ========================== {{{
+
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+endglobal
+
+global !p
+def completeRequestType(t):
+	opts = [
+		"launch",
+		"attach",
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeVariableType(t):
+	opts = [
+		"SIMPLE_VARIABLE",
+		"SHELL_INTERPOLATED_VARIABLE",
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeProgramType(t):
+	opts = [
+		"SIMPLE_PROGRAM",
+		"PROGRAM_WITH_ARGS",
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeConsoleType(t):
+	opts = [
+		"integratedTerminal",
+		"externalTerminal",
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeAdatorType(t):
+	opts = [
+		"vscode-cpptools",
+		"debugpy",
+		"vscode-bash-debug",
+		"local-lua-debugger-vscode",
+	]
+	return complete(t, opts)
+endglobal
+
+global !p
+def completeBool(t):
+	opts = [
+		"true",
+		"false",
+	]
+	return complete(t, opts)
+endglobal
+
+# }}}
+
+# ================================= Main Body ============================== {{{
+
 snippet init "Init"
 {
 	"configurations": {
-		"example": {
-			"adapter": "debugpy",
-			"configuration": {
-				"request": "launch",
-				"program": "${workspaceRoot}/lib/invariant-py/invariant-ai-agents/orobix/invariant/cli/cli.py",
-				"args": [
-					"run",
-					"--config_source_file",
-					"${workspaceRoot}/detectiv_runtime_agent/modules/detectiv_runtime/configuration_source.debug.yml"
-				],
-				"cwd": "${workspaceRoot}",
-				"stopOnEntry": true,
-				"console": "integratedTerminal"
-			}
-		},
-
-		"test-runtime": {
-			"adapter": "debugpy",
-			"configuration": {
-				"request": "launch",
-				"program": "pytest",
-				"args": ["."],
-				"cwd": "${workspaceRoot}/detectiv_runtime",
-				"stopOnEntry": true,
-				"console": "integratedTerminal"
-			}
-		}
+		CONFIG$0
 	}
 }
 endsnippet
+
+snippet CONFIG "entry for a debug configuration"
+"${1:CONFIG_NAME}": {
+
+	"default": $2`!p snip.rv = completeBool(t[2])`,
+
+	"adapter": "$3`!p snip.rv = completeAdatorType(t[3])`",
+
+	"filetypes": [${4:"javascript", "python"}],
+
+	// Variable names must start with caps
+	"variables": {
+		VAR$5
+	},
+
+	"configuration": {
+
+		"request": "$6`!p snip.rv = completeRequestType(t[6])`",
+
+		PROGRAM$7,
+
+		"stopOnEntry#json": "${stopOnEntry:$8`!p snip.rv = completeBool(t[8])`}",
+
+		"cwd": ${9:"${workspaceRoot}"},
+
+		"console": "$10`!p snip.rv = completeConsoleType(t[10])`",
+	},
+
+	"breakpoints": {
+		"exception": {
+			"caught": "",
+			"uncaught": "Y"
+		}
+	}
+},
+
+CONFIG$0
+endsnippet
+
+# }}}
+
+# ================================= Variables ============================== {{{
+
+snippet VAR
+$1`!p snip.rv = completeVariableType(t[1])`$2
+
+VAR$0
+endsnippet
+
+snippet SHELL_INTERPOLATED_VARIABLE
+"${1:SHELL_VARIABLE_NAME}": {
+	"shell": [ ${2:"echo", "hello", "world"}]
+},
+endsnippet
+
+snippet SIMPLE_VARIABLE
+"${1:NAME}": "${2:VALUE}",
+endsnippet
+
+# }}}
+
+# ================================ Programmes ============================== {{{
+
+snippet PROGRAM
+$1`!p snip.rv = completeProgramType(t[1])`$0
+endsnippet
+
+snippet SIMPLE_PROGRAM
+"program": "${1:PROGRAM_NAME}"
+endsnippet
+
+snippet PROGRAM_WITH_ARGS
+"program": [
+	"${1:PROGRAM}",
+	${2:"arg1", "arg2", ...}
+]
+endsnippet
+
+# }}}

@@ -51,7 +51,7 @@ endif
 " ~/.vim/UltiSnips/snippets.snippets
 " ~/.vim/UltiSnips/tex.snippets
 " ~/.vim/UltiSnips/xml.snippets
-" ~/.vim/UltiSnips/vimspector.json.snippets
+" ~/.vim/UltiSnips/vimspector.snippets
 
 " ============================ Syntax Highlighting =============================
 " ~/.vim/after/syntax/c.vim
@@ -70,3 +70,4 @@ endif
 " ~/.vim/after/ftplugin/bash.vim
 " ~/.vim/after/ftplugin/zsh.vim
 " ~/.vim/after/ftplugin/man.vim
+" ~/.vim/after/ftplugin/json.vim

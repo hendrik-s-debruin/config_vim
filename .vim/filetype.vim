@@ -75,3 +75,6 @@ autocmd BufRead,BufNewFile *.py setlocal foldmethod=marker
 " Git commit
 autocmd FileType gitcommit setlocal foldmethod=syntax
 autocmd FileType git setlocal foldmethod=syntax
+
+" .vimspector.json
+autocmd BufRead,BufNewFile .vimspector.json setlocal filetype=jsonc
