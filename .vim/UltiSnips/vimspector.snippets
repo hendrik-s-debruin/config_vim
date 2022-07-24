@@ -79,29 +79,30 @@ endsnippet
 
 snippet CONFIG "entry for a debug configuration"
 "${1:CONFIG_NAME}": {
+	"extends": "${2:EXTEND_CONFIG_NAME}",
 
-	"default": $2`!p snip.rv = completeBool(t[2])`,
+	"default": $3`!p snip.rv = completeBool(t[3])`,
 
-	"adapter": "$3`!p snip.rv = completeAdatorType(t[3])`",
+	"adapter": "$4`!p snip.rv = completeAdatorType(t[4])`",
 
-	"filetypes": [${4:"javascript", "python"}],
+	"filetypes": [${5:"javascript", "python"}],
 
 	// Variable names must start with caps
 	"variables": {
-		VAR$5
+		VAR$6
 	},
 
 	"configuration": {
 
-		"request": "$6`!p snip.rv = completeRequestType(t[6])`",
+		"request": "$7`!p snip.rv = completeRequestType(t[7])`",
 
-		PROGRAM$7,
+		PROGRAM$8,
 
-		"stopOnEntry#json": "${stopOnEntry:$8`!p snip.rv = completeBool(t[8])`}",
+		"stopOnEntry": $9`!p snip.rv = completeBool(t[9])`,
 
-		"cwd": ${9:"${workspaceRoot}"},
+		"cwd": ${10:"${workspaceRoot}"},
 
-		"console": "$10`!p snip.rv = completeConsoleType(t[10])`",
+		"console": "$11`!p snip.rv = completeConsoleType(t[11])`",
 	},
 
 	"breakpoints": {
