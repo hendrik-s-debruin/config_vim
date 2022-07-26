@@ -103,6 +103,10 @@ snippet CONFIG "entry for a debug configuration"
 		"cwd": ${10:"${workspaceRoot}"},
 
 		"console": "$11`!p snip.rv = completeConsoleType(t[11])`",
+
+		"env": {
+			VAR$12
+		}
 	},
 
 	"breakpoints": {
@@ -149,10 +153,8 @@ snippet SIMPLE_PROGRAM
 endsnippet
 
 snippet PROGRAM_WITH_ARGS
-"program": [
-	"${1:PROGRAM}",
-	${2:"arg1", "arg2", ...}
-]
+"program": "${1:PROGRAM}",
+"args": [${2:"arg1", "arg2", ...}],
 endsnippet
 
 # }}}
