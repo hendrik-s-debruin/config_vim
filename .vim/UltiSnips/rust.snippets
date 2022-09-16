@@ -221,3 +221,11 @@ macro_rules! ${1:macro_name} {
 	$0
 }
 endsnippet
+
+# ================================== Utility =============================== {{{
+
+snippet sleep "sleep" b
+std::thread::sleep(std::time::Duration::${1:from_secs}(${2:DURATION}));$0
+endsnippet
+
+# }}}
