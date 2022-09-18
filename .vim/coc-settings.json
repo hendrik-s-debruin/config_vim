@@ -1,6 +1,7 @@
 {
 	"python.analysis.diagnosticMode": "workspace",
-	"python.analysis.autoImportCompletions": true
+	"python.analysis.autoImportCompletions": true,
+	"rust-analyzer.cargo.runBuildScripts": true
 }
 
 // vim: ft=jsonc
