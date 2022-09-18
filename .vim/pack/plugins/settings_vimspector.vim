@@ -13,4 +13,4 @@ noremap <leader>cs  <Plug>VimspectorStepInto
 noremap <leader>co  <Plug>VimspectorStepOut
 noremap <leader>cu  <Plug>VimspectorUpFrame
 noremap <leader>cd  <Plug>VimspectorDownFrame
-noremap <leader>cv  <Plug>VimspectorBallonEval
+noremap <leader>cv  <Plug>VimspectorBalloonEval
