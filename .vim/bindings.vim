@@ -18,6 +18,8 @@ noremap  <leader>cp  :cprev<CR>
 noremap  <leader>te  :tabe %<Enter>
 noremap  <leader>T   :tabclose<Enter>
 noremap <leader>to   :tabonly<Enter>
+noremap j gj
+noremap k gk
 
 " Locally defined functions
 noremap <leader>r  :RangerChooser<Enter>
