@@ -1,7 +1,8 @@
 {
 	"python.analysis.diagnosticMode": "workspace",
 	"python.analysis.autoImportCompletions": true,
-	"rust-analyzer.cargo.runBuildScripts": true
+  "rust-analyzer.cargo.runBuildScripts": true,
+  "svelte.enable-ts-plugin": true
 }
 
 // vim: ft=jsonc

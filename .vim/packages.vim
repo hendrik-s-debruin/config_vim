@@ -17,6 +17,7 @@ packadd vim-markdown
 packadd wgsl.vim
 packadd requirements.txt.vim
 packadd vim-kitty
+packadd vim-svelte
 
 source ~/.vim/pack/plugins/settings_devicons.vim
 packadd vim-devicons

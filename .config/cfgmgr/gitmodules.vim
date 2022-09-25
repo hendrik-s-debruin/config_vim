@@ -190,3 +190,6 @@
 [submodule ".vim/pack/plugins/opt/vim-slime"]
 	path = .vim/pack/plugins/opt/vim-slime
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule ".vim/pack/plugins/opt/vim-svelte"]
+	path = .vim/pack/plugins/opt/vim-svelte
+	url = https://github.com/evanleck/vim-svelte.git
