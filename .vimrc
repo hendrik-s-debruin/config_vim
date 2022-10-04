@@ -32,13 +32,16 @@ else
 	source ~/.vim/appearance_after.vim
 endif
 
-" ==============================================================================
-" Bookmarks
-" ==============================================================================
-" ==================================== CoC =====================================
+" ================================= Bookmarks ============================== {{{
+
+" ==================================== Coc ================================= {{{
+
 " ~/.vim/coc-settings.json
 
-" ================================== Snippets ==================================
+" }}}
+
+" ================================= Snippets =============================== {{{
+
 " ~/.vim/UltiSnips/cmake.snippets
 " ~/.vim/UltiSnips/conan.snippets
 " ~/.vim/UltiSnips/cpp_algorithm_mnemonics.snippets
@@ -53,11 +56,18 @@ endif
 " ~/.vim/UltiSnips/xml.snippets
 " ~/.vim/UltiSnips/vimspector.snippets
 
-" ============================ Syntax Highlighting =============================
+
+" }}}
+
+" ============================ Syntax Highlighting ========================= {{{
+
 " ~/.vim/after/syntax/c.vim
 " ~/.vim/after/syntax/markdown.vim
 
-" =========================== Settings for Filetypes ===========================
+" }}}
+
+" ================================= Filetypes ============================== {{{
+
 " ~/.vim/after/ftplugin/matlab.vim
 " ~/.vim/after/ftplugin/c.vim
 " ~/.vim/after/ftplugin/fugitiveblame.vim
@@ -71,3 +81,7 @@ endif
 " ~/.vim/after/ftplugin/zsh.vim
 " ~/.vim/after/ftplugin/man.vim
 " ~/.vim/after/ftplugin/json.vim
+
+" }}}
+
+" }}}

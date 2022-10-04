@@ -1,13 +1,11 @@
-" This file keeps all custom functions and commands for vim
+" =========================== Reload configuration ========================= {{{
 
-" ==============================================================================
-" Reload configuration
-" ==============================================================================
 command! Rebash source ~/.vimrc
 
-" ==============================================================================
-" Hide/Show Line Numbers
-" ==============================================================================
+" }}}
+
+" ========================== Hide/show line numbers ======================== {{{
+
 function! Nu()
 	windo set number relativenumber
 	augroup numbertoggle
@@ -26,14 +24,16 @@ command! Nonu call Nonu()
 
 call Nu()
 
-" ==============================================================================
-" Close all other windows
-" ==============================================================================
+" }}}
+
+" ============================ Close other windows ========================= {{{
+
 command! Only only | tabonly
 
-" ==============================================================================
-" Conceal Level
-" ==============================================================================
+" }}}
+
+" =============================== Conceal level ============================ {{{
+
 function! ToggleConcealLevel()
 	if &conceallevel == 0
 		setlocal conceallevel=2
@@ -42,9 +42,10 @@ function! ToggleConcealLevel()
 	endif
 endfunction
 
-" ==============================================================================
-" RangerChooser
-" ==============================================================================
+" }}}
+
+" ============================== Ranger Chooser ============================ {{{
+
 function! RangeChooser()
     let temp = tempname()
     " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
@@ -76,9 +77,10 @@ function! RangeChooser()
 endfunction
 command! -bar RangerChooser call RangeChooser()
 
-" ==============================================================================
-" Sectioning
-" ==============================================================================
+" }}}
+
+" ================================ Sectioning ============================== {{{
+
 function! SecMajor(border_char)
 	let l:line = substitute(getline('.'), "^[ 	]*", "", "")
 	let l:max_cols = &textwidth
@@ -192,17 +194,19 @@ function! SecMinor(border_char)
 	execute ':normal! dd'
 endfunction
 
-" ==============================================================================
-" Write to a file that requires root permissions
-" ==============================================================================
+" }}}
+
+" ============================= Sudo write a file ========================== {{{
+
 function! Sudow()
 	:w !sudo tee % > /dev/null
 endfunction
 command! Sudow call Sudow()
 
-" ==============================================================================
-" Toggle Spellcheck
-" ==============================================================================
+" }}}
+
+" =============================== Toggle spell ============================= {{{
+
 function! ToggleSpell()
 	if &spell
 		set nospell
@@ -211,9 +215,10 @@ function! ToggleSpell()
 	endif
 endfunction
 
-" ==============================================================================
-" Soft wrap at specific line
-" ==============================================================================
+" }}}
+
+" =========================== Wrap at specific line ======================== {{{
+
 let g:should_wrap_at = 0
 function! WrapAt()
 	if g:should_wrap_at == 0
@@ -239,9 +244,10 @@ function! WrapAt()
 	endif
 endfunction
 
-" ==============================================================================
-" Get Syntax Group
-" ==============================================================================
+" }}}
+
+" ============================= Get syntax group =========================== {{{
+
 " from:
 " https://stackoverflow.com/questions/9464844/how-to-get-group-name-of-highlighting-under-cursor-in-vim
 function! SynGroup()
@@ -249,9 +255,10 @@ function! SynGroup()
 	echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfun
 
-" ==============================================================================
-" Open bookmark
-" ==============================================================================
+" }}}
+
+" ============================== Open a bookmark =========================== {{{
+
 let s:ranger_bookmarks_file = $HOME . "/.config/ranger/bookmarks"
 let s:zsh_bookmarks_file = $HOME . "/.config/zsh/bookmarks"
 function OpenShellBookmark(bookmark)
@@ -312,3 +319,5 @@ function s:ListShellBookmarks(ArgLead, CmdLine, CursorPos)
 endfunction
 
 command! -nargs=1 -complete=customlist,s:ListShellBookmarks C call OpenShellBookmark("<args>")
+
+" }}}

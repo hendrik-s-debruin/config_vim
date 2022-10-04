@@ -1,12 +1,7 @@
-" This file loads plugins. It is also responsible for setting any plugin-related
-" bindings or settings
+" ===================== Highlighting, theming, appearance ================== {{{
 
-" Plugins are loaded manually. This way, they may be selectively enabled or
-" disabled in future
-" ==============================================================================
-" Highlighting, theming and appearance
-" ==============================================================================
-" ============================ File type highlights ============================
+" ============================ Filetype highlights ========================= {{{
+
 packadd cmakecache-syntax.vim
 packadd vim-cmake-syntax
 packadd i3-vim-syntax
@@ -22,7 +17,10 @@ packadd vim-svelte
 source ~/.vim/pack/plugins/settings_devicons.vim
 packadd vim-devicons
 
-" ======================== Highlight Html Colour Codes =========================
+" }}}
+
+" ======================== Highlight html Colour codes ===================== {{{
+
 packadd vim-coloresque
 
 " Underline letters for quick navigation
@@ -40,9 +38,12 @@ packadd vim-signature
 " Writing text
 packadd goyo.vim
 
-" ==============================================================================
-" Completions
-" ==============================================================================
+" }}}
+
+" }}}
+
+" ================================ Completions ============================= {{{
+
 packadd supertab " required to play nicely with coc
 
 source ~/.vim/pack/plugins/settings_ultisnip.vim
@@ -55,9 +56,10 @@ packadd emmet-vim
 
 packadd omnisharp-vim
 
-" ==============================================================================
-" Integrations
-" ==============================================================================
+" }}}
+
+" =============================== Integrations ============================= {{{
+
 " packadd editorconfig-vim
 source ~/.vim/pack/plugins/settings_ack.vim
 packadd ack.vim
@@ -100,9 +102,10 @@ packadd vim-virtualenv
 source ~/.vim/pack/plugins/settings_silicon.vim
 packadd vim-silicon
 
-" ==============================================================================
-" Behaviours
-" ==============================================================================
+" }}}
+
+" ================================ Behaviours ============================== {{{
+
 source ~/.vim/pack/plugins/settings_camel_case_motion.vim
 packadd CamelCaseMotion
 
@@ -110,9 +113,10 @@ packadd  comfortable-motion.vim
 
 packadd vim-markdown-folding
 
-" ==============================================================================
-" Vim Augmentations
-" ==============================================================================
+" }}}
+
+" =============================== Augmentations ============================ {{{
+
 packadd DrawIt
 
 source ~/.vim/pack/plugins/settings_nerdtree.vim
@@ -167,13 +171,19 @@ packadd vim-surround
 source ~/.vim/pack/plugins/settings_slime.vim
 packadd vim-slime
 
-" ==============================================================================
-" Theme
-" ==============================================================================
+" }}}
+
+" =================================== Theme ================================ {{{
+
 packadd gruvbox
 source ~/.vim/pack/plugins/settings_gruvbox.vim
 colorscheme gruvbox
 
-" =========================== Semantic Highlighting ============================
+" }}}
+
+" =========================== Semantic Highlighting ======================== {{{
+
 packadd vim-lsp-cxx-highlight
 source ~/.vim/pack/plugins/settings_lsp_cxx_highlight.vim
+
+" }}}
