@@ -71,6 +71,7 @@ autocmd BufRead,BufNewFile *.rasi setlocal filetype=css
 
 " Python
 autocmd BufRead,BufNewFile *.py setlocal foldmethod=marker
+autocmd BufRead,BufNewFile *.yapsy-plugin setlocal filetype=toml
 
 " Git commit
 autocmd FileType gitcommit setlocal foldmethod=syntax
