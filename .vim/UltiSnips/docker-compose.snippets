@@ -1,0 +1,14 @@
+snippet init "Init"
+version: "3.7"
+services:
+	${1:SERVICE_NAME}:
+		image: ${2:IMAGE}
+		command: ${3:COMMAND}
+		ports:
+			- ${4:3000:3000}
+		working_dir: ${5:/app}
+		volumes:
+			- ${6:./:/app}
+		environment:
+			${7:VAR_NAME: VAR_VALUE}
+endsnippet

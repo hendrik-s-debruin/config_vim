@@ -55,6 +55,7 @@ endif
 " ~/.vim/UltiSnips/tex.snippets
 " ~/.vim/UltiSnips/xml.snippets
 " ~/.vim/UltiSnips/vimspector.snippets
+" ~/.vim/UltiSnips/docker-compose.snippets
 
 
 " }}}
