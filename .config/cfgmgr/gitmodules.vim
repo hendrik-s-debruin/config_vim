@@ -193,3 +193,6 @@
 [submodule ".vim/pack/plugins/opt/vim-svelte"]
 	path = .vim/pack/plugins/opt/vim-svelte
 	url = https://github.com/evanleck/vim-svelte.git
+[submodule ".vim/pack/plugins/opt/plantuml-syntax"]
+	path = .vim/pack/plugins/opt/plantuml-syntax
+	url = https://github.com/aklt/plantuml-syntax

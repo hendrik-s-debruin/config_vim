@@ -102,6 +102,8 @@ packadd vim-virtualenv
 source ~/.vim/pack/plugins/settings_silicon.vim
 packadd vim-silicon
 
+packadd plantuml-syntax
+
 " }}}
 
 " ================================ Behaviours ============================== {{{
