@@ -4,11 +4,12 @@ services:
 	${1:SERVICE_NAME}:
 		image: ${2:IMAGE}
 		command: ${3:COMMAND}
+		restart: ${4:always}
 		ports:
-			- ${4:3000:3000}
-		working_dir: ${5:/app}
+			- ${5:3000:3000}
+		working_dir: ${6:/app}
 		volumes:
-			- ${6:./:/app}
+			- ${7:./:/app}
 		environment:
-			${7:VAR_NAME: VAR_VALUE}
+			${8:VAR_NAME: VAR_VALUE}
 endsnippet
