@@ -1,3 +1,3 @@
 let g:silicon = {
-	\ 'theme': 'gruvbox'
+	\ 'theme': 'gruvbox-dark'
     \ }
