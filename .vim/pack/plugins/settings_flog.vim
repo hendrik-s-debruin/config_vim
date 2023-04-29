@@ -1,5 +1,5 @@
 " Show git log graph with format: [hash] {author name} (branch name) message
-nnoremap <leader>gl :Flog -format=[%h]\ {%an}%d\ %s<CR>
+nnoremap <leader>gl :Flog -format=[%h]\ %d\ %s<CR>
 
 augroup flog
 	" Default rebase command is weird, remap it to something more sensible
