@@ -196,3 +196,6 @@
 [submodule ".vim/pack/plugins/opt/plantuml-syntax"]
 	path = .vim/pack/plugins/opt/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax
+[submodule ".vim/pack/plugins/opt/typst.vim"]
+	path = .vim/pack/plugins/opt/typst.vim
+	url = https://github.com/kaarmu/typst.vim.git
