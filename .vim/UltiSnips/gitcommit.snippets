@@ -28,25 +28,50 @@ def completeCommitType(t):
 endglobal
 
 snippet msg "Conventional commit message" b
-$1`!p snip.rv = completeCommitType(t[1])``!p if len(t[5]) != 0:
+$1`!p snip.rv = completeCommitType(t[1])``!p
+if len(t[2]) != 0:
 	snip.rv = "("
 else:
-	snip.rv = ""`${5:SCOPE}`!p if len(t[5]) != 0:
+	snip.rv = ""`${2:SCOPE}`!p
+if len(t[2]) != 0:
 	snip.rv = ")"
 else:
-	snip.rv = ""`${6:!}: ${2:DESCRIPTION}`!p
-if len(t[3]) != 0 or len(t[4]) != 0:
-	snip.rv="..."
-else:
-	snip.rv = ""``!p if len(t[3]) != 0:
-	snip.rv = "\n\n"
-else:
-	snip.rv = ""`${3:BODY}`!p if len(t[4]) != 0:
-	snip.rv = "\n\n"
-else:
-	snip.rv = ""``!p if t[6] == "!" and len(t[4]) != 0:
-	snip.rv = "BREAKING CHANGE: "
-else:
-	snip.rv = ""`${4:FOOTER}
+	snip.rv = ""`${3:!}: ${4:DESCRIPTION}
 
+${5:BODY}`!p
+
+if len(t[6]) > 0:
+	snip.rv = "\n\nCause:\n\n"
+else:
+	snip.rv = ""
+`${6:CAUSE}`!p
+
+if len(t[7]) > 0:
+	snip.rv = "\n\nResolution:\n\n"
+else:
+	snip.rv = ""
+`${7:RESOLUTION}`!p
+
+if len(t[8]) > 0:
+	snip.rv = "\n\nOther products impacted:\n\n"
+else:
+	snip.rv = ""
+`${8:PRODUCTS}`!p
+
+if len(t[9]) > 0:
+	snip.rv = "\n\nVerification Tests:\n\n"
+else:
+	snip.rv = ""
+`${9:TESTS}`!p
+
+if len(t[10]) > 0:
+	snip.rv = "\n\nRegression Tests:\n\n"
+else:
+	snip.rv = ""
+`${10:TESTS}`!p
+
+if t[3] == '!':
+	snip.rv = "\n\nBREAKING CHANGE: "
+else:
+	snip.rv =""`$11
 endsnippet
