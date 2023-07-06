@@ -83,6 +83,7 @@ endif
 " ~/.vim/after/ftplugin/man.vim
 " ~/.vim/after/ftplugin/json.vim
 " ~/.vim/after/ftplugin/plantuml.vim
+" ~/.vim/after/ftplugin/typst.vim
 
 " }}}
 
