@@ -199,3 +199,6 @@
 [submodule ".vim/pack/plugins/opt/typst.vim"]
 	path = .vim/pack/plugins/opt/typst.vim
 	url = https://github.com/kaarmu/typst.vim.git
+[submodule ".vim/pack/plugins/opt/vista.vim"]
+	path = .vim/pack/plugins/opt/vista.vim
+	url = https://github.com/liuchengxu/vista.vim.git

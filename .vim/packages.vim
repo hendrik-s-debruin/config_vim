@@ -174,6 +174,9 @@ packadd vim-surround
 source ~/.vim/pack/plugins/settings_slime.vim
 packadd vim-slime
 
+source ~/.vim/pack/plugins/settings_vista.vim
+packadd vista.vim
+
 " }}}
 
 " =================================== Theme ================================ {{{
