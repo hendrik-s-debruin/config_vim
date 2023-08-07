@@ -2,7 +2,6 @@
 
 filetype plugin indent on
 set autoindent
-set nowrap
 set mouse=a
 set incsearch
 set spelllang=en_gb

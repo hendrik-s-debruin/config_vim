@@ -14,3 +14,4 @@ hi CocErrorHighlight cterm=underline
 hi CocInfoHighlight cterm=underline
 
 highlight Todo cterm=bold guibg=NONE
+set nowrap
