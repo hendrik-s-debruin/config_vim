@@ -79,3 +79,19 @@ autocmd FileType git setlocal foldmethod=syntax
 
 " .vimspector.json
 autocmd BufRead,BufNewFile .vimspector.json setlocal filetype=jsonc
+
+" function s:HighlightAskama()
+" endfunction
+" autocmd BufRead,BufNewFile *.askama call s:HighlightAskama()
+
+autocmd BufRead,BufNewFile *.tpp.askama,*.hpp.askama,*.cpp.askama setlocal syntax=cpp
+autocmd BufRead,BufNewFile *.c.askama                             setlocal syntax=c
+autocmd BufRead,BufNewFile CMakeLists.txt.askama                  setlocal syntax=cmake
+autocmd BufRead,BufNewFile *.rs.askama                            setlocal syntax=rust
+autocmd BufRead,BufNewFile *.py.askama,*.pyi.askama               setlocal syntax=python
+
+autocmd BufRead,BufNewFile *.tpp.jinja,*.hpp.jinja,*.cpp.jinja    setlocal syntax=cpp
+autocmd BufRead,BufNewFile *.c.jinja                              setlocal syntax=c
+autocmd BufRead,BufNewFile CMakeLists.txt.jinja                   setlocal syntax=cmake
+autocmd BufRead,BufNewFile *.rs.jinja                             setlocal syntax=rust
+autocmd BufRead,BufNewFile *.py.jinja,*.pyi.jinja                 setlocal syntax=python

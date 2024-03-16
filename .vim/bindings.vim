@@ -21,6 +21,10 @@ noremap <leader>to   :tabonly<Enter>
 noremap j gj
 noremap k gk
 
+" Swap bindings for stepping through search
+noremap n N
+noremap N n
+
 " Locally defined functions
 noremap <leader>r  :RangerChooser<Enter>
 noremap <leader>s1 :call SecMajor("=")<Enter>
@@ -33,6 +37,8 @@ noremap <leader>we :call WrapAt()<CR>
 noremap <leader>oo :only<CR>
 noremap <leader>OO :Only<CR>
 noremap <leader>sg :call SynGroup()<CR>
+noremap <leader>mf :call MarkCurrentFile()<Enter>
+noremap <leader>omf :call OpenMarkedFile()<Enter>
 
 if &diff
 	noremap Q :qall!<CR>

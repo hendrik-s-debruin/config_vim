@@ -321,3 +321,11 @@ endfunction
 command! -nargs=1 -complete=customlist,s:ListShellBookmarks C call OpenShellBookmark("<args>")
 
 " }}}
+
+function! MarkCurrentFile()
+	let g:last_marked_file = expand('%')
+endfun
+
+function! OpenMarkedFile()
+	:execute 'edit' g:last_marked_file
+endfun
